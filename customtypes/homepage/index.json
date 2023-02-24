@@ -1,0 +1,95 @@
+{
+  "id": "homepage",
+  "label": "homepage",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "title",
+          "placeholder": ""
+        }
+      },
+      "company_slogan": {
+        "type": "StructuredText",
+        "config": {
+          "label": "company slogan",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading1"
+        }
+      },
+      "cover_photo_mobile": {
+        "type": "Image",
+        "config": {
+          "label": "cover photo mobile",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "cover_photo_tablet": {
+        "type": "Image",
+        "config": {
+          "label": "cover photo tablet",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "cover_photo_desktop": {
+        "type": "Image",
+        "config": {
+          "label": "cover photo desktop",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "about_company_link": {
+        "type": "Link",
+        "config": {
+          "label": "about company link",
+          "placeholder": "link to about page",
+          "allowTargetBlank": false,
+          "select": null
+        }
+      },
+      "about_link_text": {
+        "type": "Text",
+        "config": {
+          "label": "about link text",
+          "placeholder": ""
+        }
+      },
+      "book_appointment_link": {
+        "type": "Link",
+        "config": {
+          "label": "book appointment link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "book_appointment_text": {
+        "type": "Text",
+        "config": {
+          "label": "book appointment text",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "landing_page": {
+              "type": "SharedSlice"
+            },
+            "company_info": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

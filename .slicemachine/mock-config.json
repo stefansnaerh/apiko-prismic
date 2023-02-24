@@ -1,0 +1,15 @@
+{
+  "_cts": {
+    "homepage": {},
+    "company_info": {},
+    "navigation": {}
+  },
+  "slices": {
+    "LandingPage": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "CompanyInfo": {}
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "id": "navigation",
+  "label": "Navigation",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "logo_text": {
+        "type": "StructuredText",
+        "config": {
+          "label": "logo text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "logo_subtext": {
+        "type": "StructuredText",
+        "config": {
+          "label": "logo subtext",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "home_link": {
+        "type": "Link",
+        "config": {
+          "label": "Home Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "home_link_text": {
+        "type": "Text",
+        "config": {
+          "label": "Home Link Text",
+          "placeholder": ""
+        }
+      },
+      "about_link": {
+        "type": "Link",
+        "config": {
+          "label": "About Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "about_link_text": {
+        "type": "Text",
+        "config": {
+          "label": "About Link Text",
+          "placeholder": ""
+        }
+      },
+      "service_link": {
+        "type": "Link",
+        "config": {
+          "label": "Service link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "service_text": {
+        "type": "Text",
+        "config": {
+          "label": "service text",
+          "placeholder": ""
+        }
+      },
+      "specialists_link": {
+        "type": "Link",
+        "config": {
+          "label": "Specialists Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "specialists_link_text": {
+        "type": "Text",
+        "config": {
+          "label": "Specialists Link Text",
+          "placeholder": ""
+        }
+      },
+      "contact_link": {
+        "type": "Link",
+        "config": {
+          "label": "Contact link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "contact_link_text": {
+        "type": "Text",
+        "config": {
+          "label": "Contact Link Text",
+          "placeholder": ""
+        }
+      },
+      "phone_link": {
+        "type": "Link",
+        "config": {
+          "label": "phone link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "phone_number_text": {
+        "type": "Text",
+        "config": {
+          "label": "phone number text",
+          "placeholder": ""
+        }
+      },
+      "book_appointment_link": {
+        "type": "Link",
+        "config": {
+          "label": "book appointment link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "book_appointment_text": {
+        "type": "Text",
+        "config": {
+          "label": "book appointment text",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    }
+  }
+}
