@@ -1,0 +1,41 @@
+
+
+
+.header {
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    background-color: #FCF2EA;
+    display: flex;
+}
+
+.logoTextContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    justify-content: center;
+    margin-left: -14px;
+}
+
+.logoTextContainer h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.logoTextContainer p {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin: 0;
+} 
+
+.hamburger {
+    position: absolute;
+    right: 10px;
+    top: 14px
+}
+
+

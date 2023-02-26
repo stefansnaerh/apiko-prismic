@@ -212,14 +212,14 @@ interface NavigationDocumentData {
     /**
      * logo text field in *Navigation*
      *
-     * - **Field Type**: Rich Text
+     * - **Field Type**: Title
      * - **Placeholder**: *None*
      * - **API ID Path**: navigation.logo_text
      * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    logo_text: prismicT.RichTextField;
+    logo_text: prismicT.TitleField;
     /**
      * logo subtext field in *Navigation*
      *
