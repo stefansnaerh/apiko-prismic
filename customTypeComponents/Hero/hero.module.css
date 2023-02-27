@@ -44,6 +44,7 @@
 .buttonsContainer {
     display: flex;
     gap: 4rem;
+    z-index: 2;
 }
 .buttonsContainer span {
     background-color: #977045;
