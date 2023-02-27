@@ -1,8 +1,6 @@
-import { SliceZone } from '@prismicio/react'
-import { createClient } from '../prismicio'
-import { components } from '../slices'
 
-import { PrismicNextImage } from '@prismicio/next'
+import { createClient } from '../prismicio'
+import { useState } from 'react'
 
 import Hero from '../customTypeComponents/Hero/hero'
 import Navigation from '../customTypeComponents/navigation/navigation'
@@ -14,15 +12,19 @@ import styles from '../styles/Home.module.css'
 
 
 const Page = ({ heroContainer, compInfoContainer, navigationContainer, settings }) => {
-  console.log(navigationContainer)
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
   return (
     <div>
       <Navigation
       navigationContainer={navigationContainer}
+      isHamburgerOpen={isHamburgerOpen}
+      setIsHamburgerOpen={setIsHamburgerOpen}
       />
       <div className={styles.mainContainer}>
       <Hero
       heroContainer={heroContainer}
+      isHamburgerOpen={isHamburgerOpen}
+      setIsHamburgerOpen={setIsHamburgerOpen}
       />
       </div>
     </div>

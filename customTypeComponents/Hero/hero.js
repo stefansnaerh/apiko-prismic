@@ -1,13 +1,12 @@
 
 import styles from "./hero.module.css"
-
-
+import { motion } from "framer-motion"
 import { PrismicNextImage } from '@prismicio/next'
 import { RichText, Link } from "prismic-reactjs"
 
 
 
-const Hero = ({ heroContainer }) => {
+const Hero = ({ heroContainer, isHamburgerOpen }) => {
 
 
   return (
@@ -18,7 +17,8 @@ const Hero = ({ heroContainer }) => {
                 alt={heroContainer.data.cover_photo}
                />
         </div>
-        <div className={styles.sloganButtonsContainer}>
+        {!isHamburgerOpen ?  (
+          <div className={styles.sloganButtonsContainer}>
           <RichText render={heroContainer.data.company_slogan} />
           <div className={styles.buttonsContainer}>
             <a  href={Link.url(heroContainer.data.about_company_link)}>
@@ -29,6 +29,8 @@ const Hero = ({ heroContainer }) => {
             </a>
           </div>
         </div>
+        ) : null}
+
     </section>
   )
 }
