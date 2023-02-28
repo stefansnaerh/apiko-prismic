@@ -4,6 +4,7 @@ import { useState } from 'react'
 
 import Hero from '../customTypeComponents/Hero/hero'
 import Navigation from '../customTypeComponents/navigation/navigation'
+import CompanyInfo from '../customTypeComponents/compInfo/compInfo'
 
 import styles from '../styles/Home.module.css'
 
@@ -13,6 +14,7 @@ import styles from '../styles/Home.module.css'
 
 const Page = ({ heroContainer, compInfoContainer, navigationContainer, settings }) => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
+
   return (
     <div>
       <Navigation
@@ -26,6 +28,16 @@ const Page = ({ heroContainer, compInfoContainer, navigationContainer, settings 
       isHamburgerOpen={isHamburgerOpen}
       setIsHamburgerOpen={setIsHamburgerOpen}
       />
+      <div className={styles.compInfoContainer}>
+      {compInfoContainer.map(compInfo => {
+        return (
+          <div key={compInfo.id}>
+          <CompanyInfo
+          compInfo={compInfo}/>
+          </div>
+        )
+      })}
+      </div>
       </div>
     </div>
   )

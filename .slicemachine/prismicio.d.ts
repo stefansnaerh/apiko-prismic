@@ -42,6 +42,28 @@ interface CompanyInfoDocumentData {
      */
     image: prismicT.ImageField<never>;
     /**
+     * read more link field in *Company info*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: company_info.read_more_link
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    read_more_link: prismicT.LinkField;
+    /**
+     * read more text field in *Company info*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: company_info.read_more_text
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    read_more_text: prismicT.KeyTextField;
+    /**
      * Slice Zone field in *Company info*
      *
      * - **Field Type**: Slice Zone

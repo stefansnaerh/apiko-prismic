@@ -5,3 +5,7 @@
 .mainContainer {
     padding-top: 70px;
 }
+
+.compInfoContainer>div:nth-child(even) {
+    background-color: #F7EEE7;
+}
