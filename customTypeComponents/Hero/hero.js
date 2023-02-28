@@ -8,7 +8,6 @@ import { RichText, Link } from "prismic-reactjs"
 
 const Hero = ({ heroContainer, isHamburgerOpen }) => {
 
-
   return (
     <section className={styles.container}>
         <div className={styles.imageContainer}>

@@ -33,6 +33,7 @@
     right: 0;
     margin-left: auto;
     margin-right: auto;
+    z-index: 0;
 }
 .sloganButtonsContainer h1 {
     font-size: 2rem;
