@@ -1,0 +1,9 @@
+{
+  "id": "dentists",
+  "label": "Dentists",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {}
+  }
+}

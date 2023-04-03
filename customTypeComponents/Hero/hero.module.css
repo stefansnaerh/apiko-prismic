@@ -48,6 +48,8 @@
     z-index: 2;
 }
 .buttonsContainer span {
+    display: flex;
+    gap: 3px;
     background-color: #977045;
     color: #FFFFFF;
     border-radius: 5px;

@@ -90,10 +90,202 @@ type CompanyInfoDocumentDataSlicesSlice = never;
  * @typeParam Lang - Language API ID of the document.
  */
 export type CompanyInfoDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<CompanyInfoDocumentData>, "company_info", Lang>;
-/** Content for homepage documents */
+/** Content for Contact Elements documents */
+interface ContactElementsDocumentData {
+    /**
+     * phone paragraph field in *Contact Elements*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_elements.phone_paragraph
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    phone_paragraph: prismicT.RichTextField;
+    /**
+     * phone link field in *Contact Elements*
+     *
+     * - **Field Type**: Link to Media
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_elements.phone_link
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    phone_link: prismicT.LinkToMediaField;
+    /**
+     * phone number field in *Contact Elements*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_elements.phone_number
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    phone_number: prismicT.KeyTextField;
+    /**
+     * mail paragraph field in *Contact Elements*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_elements.mail_paragraph
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    mail_paragraph: prismicT.RichTextField;
+    /**
+     * mail link field in *Contact Elements*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_elements.mail_link
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    mail_link: prismicT.LinkField;
+    /**
+     * mail address field in *Contact Elements*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_elements.mail_address
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    mail_address: prismicT.KeyTextField;
+    /**
+     * location paragraph field in *Contact Elements*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_elements.location_paragraph
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    location_paragraph: prismicT.RichTextField;
+    /**
+     * location link field in *Contact Elements*
+     *
+     * - **Field Type**: Link to Media
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_elements.location_link
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    location_link: prismicT.LinkToMediaField;
+    /**
+     * location field in *Contact Elements*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_elements.location
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    location: prismicT.KeyTextField;
+}
+/**
+ * Contact Elements document from Prismic
+ *
+ * - **API ID**: `contact_elements`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ContactElementsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ContactElementsDocumentData>, "contact_elements", Lang>;
+/** Content for Dentists documents */
+type DentistsDocumentData = Record<string, never>;
+/**
+ * Dentists document from Prismic
+ *
+ * - **API ID**: `dentists`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type DentistsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<DentistsDocumentData>, "dentists", Lang>;
+/** Content for Footer documents */
+interface FooterDocumentData {
+    /**
+     * company name field in *Footer*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.company_name
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    company_name: prismicT.RichTextField;
+    /**
+     * licence number field in *Footer*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.licence_number
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    licence_number: prismicT.RichTextField;
+    /**
+     * company address field in *Footer*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.company_address
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    company_address: prismicT.RichTextField;
+    /**
+     * company phone field in *Footer*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.company_phone
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    company_phone: prismicT.RichTextField;
+    /**
+     * company mail field in *Footer*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.company_mail
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    company_mail: prismicT.RichTextField;
+}
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<FooterDocumentData>, "footer", Lang>;
+/** Content for Hero documents */
 interface HomepageDocumentData {
     /**
-     * title field in *homepage*
+     * title field in *Hero*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
@@ -104,7 +296,7 @@ interface HomepageDocumentData {
      */
     title: prismicT.KeyTextField;
     /**
-     * company slogan field in *homepage*
+     * company slogan field in *Hero*
      *
      * - **Field Type**: Title
      * - **Placeholder**: *None*
@@ -115,7 +307,7 @@ interface HomepageDocumentData {
      */
     company_slogan: prismicT.TitleField;
     /**
-     * cover photo mobile field in *homepage*
+     * cover photo mobile field in *Hero*
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
@@ -126,7 +318,7 @@ interface HomepageDocumentData {
      */
     cover_photo_mobile: prismicT.ImageField<never>;
     /**
-     * cover photo tablet field in *homepage*
+     * cover photo tablet field in *Hero*
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
@@ -137,7 +329,7 @@ interface HomepageDocumentData {
      */
     cover_photo_tablet: prismicT.ImageField<never>;
     /**
-     * cover photo desktop field in *homepage*
+     * cover photo desktop field in *Hero*
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
@@ -148,7 +340,7 @@ interface HomepageDocumentData {
      */
     cover_photo_desktop: prismicT.ImageField<never>;
     /**
-     * about company link field in *homepage*
+     * about company link field in *Hero*
      *
      * - **Field Type**: Link
      * - **Placeholder**: link to about page
@@ -159,7 +351,7 @@ interface HomepageDocumentData {
      */
     about_company_link: prismicT.LinkField;
     /**
-     * about link text field in *homepage*
+     * about link text field in *Hero*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
@@ -170,7 +362,7 @@ interface HomepageDocumentData {
      */
     about_link_text: prismicT.KeyTextField;
     /**
-     * book appointment link field in *homepage*
+     * book appointment link field in *Hero*
      *
      * - **Field Type**: Link
      * - **Placeholder**: *None*
@@ -181,7 +373,7 @@ interface HomepageDocumentData {
      */
     book_appointment_link: prismicT.LinkField;
     /**
-     * book appointment text field in *homepage*
+     * book appointment text field in *Hero*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
@@ -192,7 +384,7 @@ interface HomepageDocumentData {
      */
     book_appointment_text: prismicT.KeyTextField;
     /**
-     * Slice Zone field in *homepage*
+     * Slice Zone field in *Hero*
      *
      * - **Field Type**: Slice Zone
      * - **Placeholder**: *None*
@@ -204,12 +396,12 @@ interface HomepageDocumentData {
     slices: prismicT.SliceZone<HomepageDocumentDataSlicesSlice>;
 }
 /**
- * Slice for *homepage → Slice Zone*
+ * Slice for *Hero → Slice Zone*
  *
  */
 type HomepageDocumentDataSlicesSlice = LandingPageSlice | CompanyInfoSlice;
 /**
- * homepage document from Prismic
+ * Hero document from Prismic
  *
  * - **API ID**: `homepage`
  * - **Repeatable**: `false`
@@ -434,7 +626,7 @@ type NavigationDocumentDataSlicesSlice = never;
  * @typeParam Lang - Language API ID of the document.
  */
 export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
-export type AllDocumentTypes = CompanyInfoDocument | HomepageDocument | NavigationDocument;
+export type AllDocumentTypes = CompanyInfoDocument | ContactElementsDocument | DentistsDocument | FooterDocument | HomepageDocument | NavigationDocument;
 /**
  * Primary content in CompanyInfo → Primary
  *
@@ -514,6 +706,65 @@ type CompanyInfoSliceVariation = CompanyInfoSliceDefault;
  *
  */
 export type CompanyInfoSlice = prismicT.SharedSlice<"company_info", CompanyInfoSliceVariation>;
+/**
+ * Primary content in Dentist → Primary
+ *
+ */
+interface DentistSliceDefaultPrimary {
+    /**
+     * name field in *Dentist → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: dentist.primary.name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    name: prismicT.RichTextField;
+    /**
+     * education field in *Dentist → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: dentist.primary.education
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    education: prismicT.RichTextField;
+    /**
+     * profile image field in *Dentist → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: dentist.primary.profile_image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    profile_image: prismicT.ImageField<never>;
+}
+/**
+ * Default variation for Dentist Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Dentist`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type DentistSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<DentistSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *Dentist*
+ *
+ */
+type DentistSliceVariation = DentistSliceDefault;
+/**
+ * Dentist Shared Slice
+ *
+ * - **API ID**: `dentist`
+ * - **Description**: `Dentist`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type DentistSlice = prismicT.SharedSlice<"dentist", DentistSliceVariation>;
 /**
  * Primary content in LandingPage → Primary
  *
@@ -638,6 +889,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { CompanyInfoDocumentData, CompanyInfoDocumentDataSlicesSlice, CompanyInfoDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, CompanyInfoSliceDefaultPrimary, CompanyInfoSliceDefault, CompanyInfoSliceVariation, CompanyInfoSlice, LandingPageSliceDefaultPrimary, LandingPageSliceDefault, LandingPageSliceVariation, LandingPageSlice };
+        export type { CompanyInfoDocumentData, CompanyInfoDocumentDataSlicesSlice, CompanyInfoDocument, ContactElementsDocumentData, ContactElementsDocument, DentistsDocumentData, DentistsDocument, FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, CompanyInfoSliceDefaultPrimary, CompanyInfoSliceDefault, CompanyInfoSliceVariation, CompanyInfoSlice, DentistSliceDefaultPrimary, DentistSliceDefault, DentistSliceVariation, DentistSlice, LandingPageSliceDefaultPrimary, LandingPageSliceDefault, LandingPageSliceVariation, LandingPageSlice };
     }
 }

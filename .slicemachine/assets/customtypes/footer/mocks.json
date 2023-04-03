@@ -1,0 +1,61 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "compass"
+  },
+  "company_name": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Do tempor ullamco proident do mollit commodo ullamco. Officia ullamco Lorem sunt consectetur elit non labore aliqua ullamco ipsum mollit Lorem consequat. Qui occaecat culpa dolore mollit id adipisicing qui exercitation ullamco adipisicing excepteur est exercitation fugiat voluptate."
+        }
+      }
+    ]
+  },
+  "licence_number": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Reprehenderit nulla eu qui ex ipsum labore tempor ex id ad qui do cillum tempor proident. Elit ea ut eiusmod consequat eu dolor. Sit sunt sit eiusmod laboris dolore."
+        }
+      }
+    ]
+  },
+  "company_address": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Fugiat ex incididunt eiusmod deserunt pariatur esse ullamco veniam commodo ad. Exercitation fugiat consequat cillum ut velit incididunt cupidatat non consectetur ipsum occaecat. Lorem non culpa nostrud non laboris amet culpa exercitation ipsum incididunt eu."
+        }
+      }
+    ]
+  },
+  "company_phone": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Irure do adipisicing Lorem cupidatat elit enim mollit ut aliqua officia nisi pariatur fugiat. Reprehenderit eu ex consectetur exercitation amet minim non. Et incididunt velit Lorem amet in sint."
+        }
+      }
+    ]
+  },
+  "company_mail": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Culpa aliqua consequat anim voluptate amet ad dolor sit et. Id dolore eu culpa irure quis minim proident sint est occaecat pariatur aliqua minim eiusmod cupidatat."
+        }
+      }
+    ]
+  }
+}

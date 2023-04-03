@@ -7,9 +7,9 @@ import { RichText, Link } from "prismic-reactjs"
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
-import HamburgerButton from '../../components/hamburger'
+import HamburgerButton from '../../components/hamburger/hamburger'
 
-import calendarIcon from '../../public/calendar.png'
+import calendarIcon from '../../public/calendar.svg'
 import phoneIcon from '../../public/phone.png'
 
 const Navigation = ( {navigationContainer, isHamburgerOpen, setIsHamburgerOpen} ) => {
@@ -45,7 +45,7 @@ const Navigation = ( {navigationContainer, isHamburgerOpen, setIsHamburgerOpen} 
                     <a href={Link.url(navigationContainer.data.service_link)}>
                         <li>{navigationContainer.data.service_text }</li>
                     </a>
-                    <a href={Link.url(navigationContainer.data.specialists_link)}>
+                    <a href='/dentists'>
                         <li>{navigationContainer.data.specialists_link_text }</li>
                     </a>
                     <a href={Link.url(navigationContainer.data.contact_link)}>
