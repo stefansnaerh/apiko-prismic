@@ -1,9 +1,11 @@
 
 import styles from "./hero.module.css"
-import { motion } from "framer-motion"
+
 import { PrismicNextImage } from '@prismicio/next'
 import { RichText, Link } from "prismic-reactjs"
+import Image from "next/image"
 
+import calendarIcon from '../../public/calendar.svg'
 
 
 const Hero = ({ heroContainer, isHamburgerOpen }) => {
@@ -23,8 +25,11 @@ const Hero = ({ heroContainer, isHamburgerOpen }) => {
             <a  href={Link.url(heroContainer.data.about_company_link)}>
               <span >{heroContainer.data.about_link_text }</span>
             </a>
-            <a  href={Link.url(heroContainer.data.book_appointment_link)}>
-              <span >{heroContainer.data.book_appointment_text }</span>
+            <a  href={Link.url(heroContainer.data.book_appointment_link)}> 
+              <span >
+                <Image src={calendarIcon} height="18" alt="phone icon"/>
+                {heroContainer.data.book_appointment_text }
+              </span>
             </a>
           </div>
         </div>

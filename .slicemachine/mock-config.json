@@ -2,7 +2,10 @@
   "_cts": {
     "homepage": {},
     "company_info": {},
-    "navigation": {}
+    "navigation": {},
+    "contact_elements": {},
+    "footer": {},
+    "dentists": {}
   },
   "slices": {
     "LandingPage": {
@@ -10,6 +13,11 @@
         "primary": {}
       }
     },
-    "CompanyInfo": {}
+    "CompanyInfo": {},
+    "Dentist": {
+      "default": {
+        "primary": {}
+      }
+    }
   }
 }

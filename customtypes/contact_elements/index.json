@@ -1,0 +1,89 @@
+{
+  "id": "contact_elements",
+  "label": "Contact Elements",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "contactElements",
+          "placeholder": ""
+        }
+      },
+      "phone_paragraph": {
+        "type": "StructuredText",
+        "config": {
+          "label": "phone paragraph",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
+      "phone_link": {
+        "type": "Link",
+        "config": {
+          "label": "phone link",
+          "placeholder": "",
+          "select": "media"
+        }
+      },
+      "phone_number": {
+        "type": "Text",
+        "config": {
+          "label": "phone number",
+          "placeholder": ""
+        }
+      },
+      "mail_paragraph": {
+        "type": "StructuredText",
+        "config": {
+          "label": "mail paragraph",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "mail_link": {
+        "type": "Link",
+        "config": {
+          "label": "mail link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "mail_address": {
+        "type": "Text",
+        "config": {
+          "label": "mail address",
+          "placeholder": ""
+        }
+      },
+      "location_paragraph": {
+        "type": "StructuredText",
+        "config": {
+          "label": "location paragraph",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "location_link": {
+        "type": "Link",
+        "config": {
+          "label": "location link",
+          "placeholder": "",
+          "select": "media"
+        }
+      },
+      "location": {
+        "type": "Text",
+        "config": {
+          "label": "location",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}
