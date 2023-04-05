@@ -8,6 +8,7 @@ import CompanyInfo from '../customTypeComponents/compInfo/compInfo'
 import ContactElements from '../customTypeComponents/contactElements/contactElements'
 import Footer from '../customTypeComponents/footer/footer'
 
+
 import styles from '../styles/Home.module.css'
 
 
@@ -18,7 +19,7 @@ const Page = ({ heroContainer, compInfoContainer, navigationContainer, contactEl
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
 
   return (
-    <div>
+    <>
       <Navigation
       navigationContainer={navigationContainer}
       isHamburgerOpen={isHamburgerOpen}
@@ -47,7 +48,7 @@ const Page = ({ heroContainer, compInfoContainer, navigationContainer, contactEl
       <Footer
       footerContainer={footerContainer}
       />
-    </div>
+    </>
   )
 }
  

@@ -13,9 +13,9 @@ import calendarIcon from '../../public/calendar.svg'
 import phoneIcon from '../../public/phone.png'
 
 const Navigation = ( {navigationContainer, isHamburgerOpen, setIsHamburgerOpen} ) => {
-    
-
+        console.log(navigationContainer)
     return (
+        
         <header className={styles.header}>
            <PrismicNextImage 
             field={navigationContainer.data.logo} 
