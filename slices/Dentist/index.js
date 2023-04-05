@@ -1,30 +1,19 @@
 import React from 'react'
 import { RichText } from 'prismic-reactjs'
+import { PrismicNextImage } from '@prismicio/next'
 
 const Dentist = ({ slice }) => (
+  
   <section>
-    <span className="title">
-      {
-        slice.primary.title ?
-        <RichText render={slice.primary.title}/>
-        : <h2>Template slice, update me!</h2>
-      }
-    </span>
-    {
-      slice.primary.description ?
-      <RichText render={slice.primary.description}/>
-      : <p>start by editing this slice from inside Slice Machine!</p>
-    }
-    <style jsx>{`
-        section {
-          max-width: 600px;
-          margin: 4em auto;
-          text-align: center;
-        }
-        .title {
-          color: #8592e0;
-        }
-    `}</style>
+    {console.log(slice)}
+    <PrismicNextImage
+    field={slice.primary.profile_image.url}
+    width={120}
+    height={120}
+    alt={slice.primary.profile_image.alt}
+    />
+      <RichText render={slice.primary.name} />
+      <RichText render={slice.primary.education} />
   </section>
 )
 

@@ -5,6 +5,8 @@ import { PrismicProvider } from '@prismicio/react'
 import { PrismicPreview } from '@prismicio/next'
 import { linkResolver, repositoryName } from '../prismicio'
 
+import Layout from '../components/layout/layout'
+
 
  
 export default function App({ Component, pageProps }) {

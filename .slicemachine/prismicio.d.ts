@@ -203,7 +203,24 @@ interface ContactElementsDocumentData {
  */
 export type ContactElementsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ContactElementsDocumentData>, "contact_elements", Lang>;
 /** Content for Dentists documents */
-type DentistsDocumentData = Record<string, never>;
+interface DentistsDocumentData {
+    /**
+     * Slice Zone field in *Dentists*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: dentists.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<DentistsDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Dentists → Slice Zone*
+ *
+ */
+type DentistsDocumentDataSlicesSlice = DentistSlice;
 /**
  * Dentists document from Prismic
  *
@@ -213,7 +230,7 @@ type DentistsDocumentData = Record<string, never>;
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type DentistsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<DentistsDocumentData>, "dentists", Lang>;
+export type DentistsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<DentistsDocumentData>, "dentists", Lang>;
 /** Content for Footer documents */
 interface FooterDocumentData {
     /**
@@ -889,6 +906,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { CompanyInfoDocumentData, CompanyInfoDocumentDataSlicesSlice, CompanyInfoDocument, ContactElementsDocumentData, ContactElementsDocument, DentistsDocumentData, DentistsDocument, FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, CompanyInfoSliceDefaultPrimary, CompanyInfoSliceDefault, CompanyInfoSliceVariation, CompanyInfoSlice, DentistSliceDefaultPrimary, DentistSliceDefault, DentistSliceVariation, DentistSlice, LandingPageSliceDefaultPrimary, LandingPageSliceDefault, LandingPageSliceVariation, LandingPageSlice };
+        export type { CompanyInfoDocumentData, CompanyInfoDocumentDataSlicesSlice, CompanyInfoDocument, ContactElementsDocumentData, ContactElementsDocument, DentistsDocumentData, DentistsDocumentDataSlicesSlice, DentistsDocument, FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, CompanyInfoSliceDefaultPrimary, CompanyInfoSliceDefault, CompanyInfoSliceVariation, CompanyInfoSlice, DentistSliceDefaultPrimary, DentistSliceDefault, DentistSliceVariation, DentistSlice, LandingPageSliceDefaultPrimary, LandingPageSliceDefault, LandingPageSliceVariation, LandingPageSlice };
     }
 }
