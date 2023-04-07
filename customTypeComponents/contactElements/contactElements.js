@@ -16,7 +16,7 @@ const ContactElements = ( {contactElementsContainer} ) => {
         <section className={styles.container}>
             <div>
                 <RichText render={contactElementsContainer.data.phone_paragraph} />           
-                <a  href={Link.url(contactElementsContainer.data.phone_link)}>
+                <a  href={`tel:${contactElementsContainer.data.phone_number}`}>
                     <span className={styles.button} >
                         <Image src={phoneIcon} height="26" alt="phone icon"/>
                         {contactElementsContainer.data.phone_number}
@@ -26,7 +26,7 @@ const ContactElements = ( {contactElementsContainer} ) => {
             <span className={styles.yellowLine}></span>
             <div>
                 <RichText render={contactElementsContainer.data.mail_paragraph} />           
-                <a  href={Link.url(contactElementsContainer.data.mail_link)}>
+                <a  href={`mailto:${contactElementsContainer.data.mail_address}`}>
                     <span className={styles.button} >
                         <Image src={mailIcon} height="20" alt="mail icon"/>
                         {contactElementsContainer.data.mail_address}

@@ -13,18 +13,20 @@ import calendarIcon from '../../public/calendar.svg'
 import phoneIcon from '../../public/phone.png'
 
 const Navigation = ( {navigationContainer, isHamburgerOpen, setIsHamburgerOpen} ) => {
-        console.log(navigationContainer)
+     
     return (
         
         <header className={styles.header}>
-           <PrismicNextImage 
-            field={navigationContainer.data.logo} 
-            alt={""}
-            height="70"
-            /> 
+            <a href={"/"}>
+                <PrismicNextImage 
+                field={navigationContainer.data.logo} 
+                alt={""}
+                height="70"
+                /> 
+            </a>
             <div className={styles.logoTextContainer}>
-            <RichText render={navigationContainer.data.logo_text} />
-            <RichText render={navigationContainer.data.logo_subtext} />
+                <RichText render={navigationContainer.data.logo_text} />
+                <RichText render={navigationContainer.data.logo_subtext} />
             </div>
             <HamburgerButton
             isHamburgerOpen={isHamburgerOpen}
@@ -36,7 +38,7 @@ const Navigation = ( {navigationContainer, isHamburgerOpen, setIsHamburgerOpen} 
             transition={{duration:0.5}}
             >
                 <ul>
-                    <a href={Link.url(navigationContainer.data.home_link)}>
+                    <a href={'/'} >
                         <li>{navigationContainer.data.home_link_text }</li>
                     </a>
                     <a href={Link.url(navigationContainer.data.about_link)}>

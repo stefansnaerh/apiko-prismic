@@ -6,10 +6,16 @@ import { PrismicPreview } from '@prismicio/next'
 import { linkResolver, repositoryName } from '../prismicio'
 
 import Layout from '../components/layout/layout'
+import Navigation from '../customTypeComponents/navigation/navigation'
+import { createClient } from '../prismicio'
+import NextApp, { AppProps } from 'next/app';
+import { useState } from 'react'
+
 
 
  
-export default function App({ Component, pageProps }) {
+const App = ({ Component, pageProps, navigationContainer, footerContainer, contactElementsContainer }) => {
+
   return (
     <PrismicProvider
       linkResolver={linkResolver}
@@ -20,9 +26,29 @@ export default function App({ Component, pageProps }) {
       )}
     >
       <PrismicPreview repositoryName={repositoryName}>
+        <Layout
+        navigationContainer={navigationContainer}
+        footerContainer={footerContainer}
+        contactElementsContainer={contactElementsContainer}
+        >
+
         <Component {...pageProps} />
+
+      </Layout>
       </PrismicPreview>
     </PrismicProvider>
   
   )
 }
+
+App.getInitialProps = async (appContext) => {
+
+  const client = createClient({ appContext })
+  const appProps = await NextApp.getInitialProps(appContext);
+  const navigationContainer = await client.getSingle('navigation');
+  const contactElementsContainer = await client.getSingle('contact_elements');
+  const footerContainer = await client.getSingle('footer');
+  return { ...appProps, navigationContainer, contactElementsContainer, footerContainer };
+};
+
+export default App

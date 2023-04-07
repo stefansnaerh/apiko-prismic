@@ -6,6 +6,18 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for aboutUs documents */
+type AboutusDocumentData = Record<string, never>;
+/**
+ * aboutUs document from Prismic
+ *
+ * - **API ID**: `aboutus`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type AboutusDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<AboutusDocumentData>, "aboutus", Lang>;
 /** Content for Company info documents */
 interface CompanyInfoDocumentData {
     /**
@@ -643,7 +655,7 @@ type NavigationDocumentDataSlicesSlice = never;
  * @typeParam Lang - Language API ID of the document.
  */
 export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
-export type AllDocumentTypes = CompanyInfoDocument | ContactElementsDocument | DentistsDocument | FooterDocument | HomepageDocument | NavigationDocument;
+export type AllDocumentTypes = AboutusDocument | CompanyInfoDocument | ContactElementsDocument | DentistsDocument | FooterDocument | HomepageDocument | NavigationDocument;
 /**
  * Primary content in CompanyInfo → Primary
  *
@@ -731,23 +743,23 @@ interface DentistSliceDefaultPrimary {
     /**
      * name field in *Dentist → Primary*
      *
-     * - **Field Type**: Rich Text
+     * - **Field Type**: Title
      * - **Placeholder**: *None*
      * - **API ID Path**: dentist.primary.name
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    name: prismicT.RichTextField;
+    name: prismicT.TitleField;
     /**
      * education field in *Dentist → Primary*
      *
-     * - **Field Type**: Rich Text
+     * - **Field Type**: Title
      * - **Placeholder**: *None*
      * - **API ID Path**: dentist.primary.education
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    education: prismicT.RichTextField;
+    education: prismicT.TitleField;
     /**
      * profile image field in *Dentist → Primary*
      *
@@ -906,6 +918,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { CompanyInfoDocumentData, CompanyInfoDocumentDataSlicesSlice, CompanyInfoDocument, ContactElementsDocumentData, ContactElementsDocument, DentistsDocumentData, DentistsDocumentDataSlicesSlice, DentistsDocument, FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, CompanyInfoSliceDefaultPrimary, CompanyInfoSliceDefault, CompanyInfoSliceVariation, CompanyInfoSlice, DentistSliceDefaultPrimary, DentistSliceDefault, DentistSliceVariation, DentistSlice, LandingPageSliceDefaultPrimary, LandingPageSliceDefault, LandingPageSliceVariation, LandingPageSlice };
+        export type { AboutusDocumentData, AboutusDocument, CompanyInfoDocumentData, CompanyInfoDocumentDataSlicesSlice, CompanyInfoDocument, ContactElementsDocumentData, ContactElementsDocument, DentistsDocumentData, DentistsDocumentDataSlicesSlice, DentistsDocument, FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, CompanyInfoSliceDefaultPrimary, CompanyInfoSliceDefault, CompanyInfoSliceVariation, CompanyInfoSlice, DentistSliceDefaultPrimary, DentistSliceDefault, DentistSliceVariation, DentistSlice, LandingPageSliceDefaultPrimary, LandingPageSliceDefault, LandingPageSliceVariation, LandingPageSlice };
     }
 }
