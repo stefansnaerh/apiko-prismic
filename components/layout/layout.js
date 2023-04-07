@@ -3,10 +3,12 @@ import Navigation from "../../customTypeComponents/navigation/navigation"
 import Footer from "../../customTypeComponents/footer/footer"
 import ContactElements from "../../customTypeComponents/contactElements/contactElements"
 import { useState } from "react"
+import { createClient } from "../../prismicio"
 
-const Layout = ({navigationContainer, contactElementsContainer, footerContainer}, {children}) => {
+import styles from './layout.module.css'
+
+const Layout = ({navigationContainer, contactElementsContainer, footerContainer, children}) => {
     const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
-    console.log(navigationContainer)
     return (
         <>
             <Navigation
@@ -14,7 +16,9 @@ const Layout = ({navigationContainer, contactElementsContainer, footerContainer}
             isHamburgerOpen={isHamburgerOpen}
             setIsHamburgerOpen={setIsHamburgerOpen}
             />
-            {children}
+            <div className={styles.container}>
+                {children}
+            </div>
             <ContactElements
             contactElementsContainer={contactElementsContainer}
             />
@@ -31,8 +35,6 @@ export default Layout
  
 export async function getStaticProps({ previewData }) {
     const client = createClient({ previewData })
-
-    console.log(navigationContainer)
 
     const navigationContainer = await client.getSingle('navigation')
     const contactElementsContainer = await client.getSingle('contact_elements')

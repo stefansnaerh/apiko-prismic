@@ -7,9 +7,9 @@
         "__TYPE__": "StructuredTextContent",
         "value": [
           {
-            "type": "paragraph",
+            "type": "heading2",
             "content": {
-              "text": "Et ea mollit culpa laborum aliquip ex ad eu. Ullamco exercitation sunt ut aliqua."
+              "text": "Around"
             }
           }
         ]
@@ -18,24 +18,23 @@
         "__TYPE__": "StructuredTextContent",
         "value": [
           {
-            "type": "paragraph",
+            "type": "heading3",
             "content": {
-              "text": "Anim consequat laborum consectetur mollit ipsum occaecat nisi est consequat ex adipisicing. Ea ea pariatur minim enim nulla. Lorem anim cupidatat consectetur incididunt consectetur."
+              "text": "Safety"
             }
           }
         ]
       },
       "profile_image": {
-        "__TYPE__": "ImageContent",
         "origin": {
           "id": "main",
-          "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
-          "width": 4380,
-          "height": 2895
+          "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
+          "width": 8640,
+          "height": 8640
         },
-        "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
-        "width": 4380,
-        "height": 2895,
+        "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?rect=0%2C0%2C8640%2C8640&w=300&h=300",
+        "width": 300,
+        "height": 300,
         "edit": {
           "zoom": 1,
           "crop": {
@@ -44,6 +43,9 @@
           },
           "background": "transparent"
         },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
         "thumbnails": {}
       }
     },

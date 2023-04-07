@@ -17,7 +17,7 @@
             "label": "name",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph"
+            "single": "heading2"
           }
         },
         "education": {
@@ -26,14 +26,16 @@
             "label": "education",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph"
+            "single": "heading3"
           }
         },
         "profile_image": {
           "type": "Image",
           "config": {
             "label": "profile image",
-            "constraint": {},
+            "constraint": {
+              "width": 300
+            },
             "thumbnails": []
           }
         }

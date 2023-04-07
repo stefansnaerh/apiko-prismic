@@ -10,19 +10,17 @@ import Footer from "../customTypeComponents/footer/footer"
 import styles from '../styles/Home.module.css'
 
 
-const Dentists = ( {navigationContainer, contactElementsContainer, footerContainer, dentistsContainer} ) => {
-    const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
-    console.log(dentistsContainer)
+const Dentists = ( {dentistsContainer} ) => {
+  
     return (
         <>
-        <Navigation
-        navigationContainer={navigationContainer}
-        isHamburgerOpen={isHamburgerOpen}
-        setIsHamburgerOpen={setIsHamburgerOpen}
-        />
-            <section >
+          <section className={styles.dentistsContainer} >
+            <div className={styles.headlineContainer}>
+              <h1>Tannlæknar</h1>
+              <div className={styles.yellowLine}></div>
+            </div>
             <SliceZone slices={dentistsContainer.data.slices} components={components}   />
-            </section>
+          </section>
         </>
     )
 }
@@ -30,17 +28,11 @@ const Dentists = ( {navigationContainer, contactElementsContainer, footerContain
  
 export async function getStaticProps({ previewData }) {
     const client = createClient({ previewData })
-  
-    const navigationContainer = await client.getSingle('navigation')
-    const contactElementsContainer = await client.getSingle('contact_elements')
-    const footerContainer = await client.getSingle('footer')
+
     const dentistsContainer = await client.getSingle('dentists')
   
     return {
       props: {
-        navigationContainer,
-        contactElementsContainer,
-        footerContainer,
         dentistsContainer
       }
     }
