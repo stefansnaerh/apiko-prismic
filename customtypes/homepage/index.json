@@ -80,14 +80,7 @@
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
-          "choices": {
-            "landing_page": {
-              "type": "SharedSlice"
-            },
-            "company_info": {
-              "type": "SharedSlice"
-            }
-          }
+          "choices": {}
         }
       }
     }

@@ -1,5 +1,5 @@
 
-import styles from "./hero.module.css"
+import styles from "./hero.module.scss"
 
 import { PrismicNextImage } from '@prismicio/next'
 import { RichText, Link } from "prismic-reactjs"
