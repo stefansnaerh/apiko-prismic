@@ -1,0 +1,63 @@
+
+
+
+.container {
+    overflow: hidden;
+    .imageContainer {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        vertical-align: middle;
+        align-items: center;
+        height: 90vh;
+        img {
+            height: 962px;
+            margin: auto;
+            margin-top: 0px;
+        }
+    }  
+    .sloganButtonsContainer {
+        padding-left: 30px;
+        gap: 3rem;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 20%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 0;
+        h1 {
+            font-size: 2rem;
+            font-weight: 400;
+            color: #373737; 
+            text-align: center;
+            width: 20rem;
+        }
+        .buttonsContainer {
+            display: flex;
+            gap: 4rem;
+            z-index: 2;
+            span {
+                display: flex;
+                gap: 3px;
+                background-color: #977045;
+                color: #FFFFFF;
+                border-radius: 5px;
+                padding: 6px 12px 6px 12px;
+                font-size: 1.4rem;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 475px) {
+    .imageContainer img {
+        height: 649px;
+    }
+  }
+  

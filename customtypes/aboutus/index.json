@@ -1,9 +1,0 @@
-{
-  "id": "aboutus",
-  "label": "aboutUs",
-  "repeatable": false,
-  "status": true,
-  "json": {
-    "Main": {}
-  }
-}

@@ -1,6 +1,6 @@
 {
   "id": "company_info",
-  "label": "Company info",
+  "label": "Company Info",
   "repeatable": true,
   "status": true,
   "json": {

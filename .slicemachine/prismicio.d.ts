@@ -6,22 +6,10 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
-/** Content for aboutUs documents */
-type AboutusDocumentData = Record<string, never>;
-/**
- * aboutUs document from Prismic
- *
- * - **API ID**: `aboutus`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type AboutusDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<AboutusDocumentData>, "aboutus", Lang>;
-/** Content for Company info documents */
+/** Content for Company Info documents */
 interface CompanyInfoDocumentData {
     /**
-     * title field in *Company info*
+     * title field in *Company Info*
      *
      * - **Field Type**: Title
      * - **Placeholder**: title of component
@@ -32,7 +20,7 @@ interface CompanyInfoDocumentData {
      */
     title: prismicT.TitleField;
     /**
-     * paragraph field in *Company info*
+     * paragraph field in *Company Info*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: component paragraph
@@ -43,7 +31,7 @@ interface CompanyInfoDocumentData {
      */
     paragraph: prismicT.RichTextField;
     /**
-     * image field in *Company info*
+     * image field in *Company Info*
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
@@ -54,7 +42,7 @@ interface CompanyInfoDocumentData {
      */
     image: prismicT.ImageField<never>;
     /**
-     * read more link field in *Company info*
+     * read more link field in *Company Info*
      *
      * - **Field Type**: Link
      * - **Placeholder**: *None*
@@ -65,7 +53,7 @@ interface CompanyInfoDocumentData {
      */
     read_more_link: prismicT.LinkField;
     /**
-     * read more text field in *Company info*
+     * read more text field in *Company Info*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
@@ -76,7 +64,7 @@ interface CompanyInfoDocumentData {
      */
     read_more_text: prismicT.KeyTextField;
     /**
-     * Slice Zone field in *Company info*
+     * Slice Zone field in *Company Info*
      *
      * - **Field Type**: Slice Zone
      * - **Placeholder**: *None*
@@ -88,12 +76,12 @@ interface CompanyInfoDocumentData {
     slices: prismicT.SliceZone<CompanyInfoDocumentDataSlicesSlice>;
 }
 /**
- * Slice for *Company info → Slice Zone*
+ * Slice for *Company Info → Slice Zone*
  *
  */
 type CompanyInfoDocumentDataSlicesSlice = never;
 /**
- * Company info document from Prismic
+ * Company Info document from Prismic
  *
  * - **API ID**: `company_info`
  * - **Repeatable**: `true`
@@ -428,7 +416,7 @@ interface HomepageDocumentData {
  * Slice for *Hero → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = LandingPageSlice | CompanyInfoSlice;
+type HomepageDocumentDataSlicesSlice = never;
 /**
  * Hero document from Prismic
  *
@@ -655,86 +643,7 @@ type NavigationDocumentDataSlicesSlice = never;
  * @typeParam Lang - Language API ID of the document.
  */
 export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
-export type AllDocumentTypes = AboutusDocument | CompanyInfoDocument | ContactElementsDocument | DentistsDocument | FooterDocument | HomepageDocument | NavigationDocument;
-/**
- * Primary content in CompanyInfo → Primary
- *
- */
-interface CompanyInfoSliceDefaultPrimary {
-    /**
-     * Title field in *CompanyInfo → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
-     * - **API ID Path**: company_info.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    title: prismicT.TitleField;
-    /**
-     * Description field in *CompanyInfo → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
-     * - **API ID Path**: company_info.primary.description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    description: prismicT.RichTextField;
-    /**
-     * read more field in *CompanyInfo → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: company_info.primary.read_more
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    read_more: prismicT.LinkField;
-    /**
-     * read more text field in *CompanyInfo → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: company_info.primary.read_more_text
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    read_more_text: prismicT.KeyTextField;
-    /**
-     * image field in *CompanyInfo → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: company_info.primary.image
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    image: prismicT.ImageField<never>;
-}
-/**
- * Default variation for CompanyInfo Slice
- *
- * - **API ID**: `default`
- * - **Description**: `CompanyInfo`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type CompanyInfoSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<CompanyInfoSliceDefaultPrimary>, never>;
-/**
- * Slice variation for *CompanyInfo*
- *
- */
-type CompanyInfoSliceVariation = CompanyInfoSliceDefault;
-/**
- * CompanyInfo Shared Slice
- *
- * - **API ID**: `company_info`
- * - **Description**: `CompanyInfo`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type CompanyInfoSlice = prismicT.SharedSlice<"company_info", CompanyInfoSliceVariation>;
+export type AllDocumentTypes = CompanyInfoDocument | ContactElementsDocument | DentistsDocument | FooterDocument | HomepageDocument | NavigationDocument;
 /**
  * Primary content in Dentist → Primary
  *
@@ -794,130 +703,11 @@ type DentistSliceVariation = DentistSliceDefault;
  *
  */
 export type DentistSlice = prismicT.SharedSlice<"dentist", DentistSliceVariation>;
-/**
- * Primary content in LandingPage → Primary
- *
- */
-interface LandingPageSliceDefaultPrimary {
-    /**
-     * Description field in *LandingPage → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
-     * - **API ID Path**: landing_page.primary.description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    description: prismicT.RichTextField;
-    /**
-     * more link field in *LandingPage → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: landing_page.primary.more_link
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    more_link: prismicT.LinkField;
-    /**
-     * more text field in *LandingPage → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: landing_page.primary.more_text
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    more_text: prismicT.KeyTextField;
-    /**
-     * book appointment link field in *LandingPage → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: landing_page.primary.book_appointment_link
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    book_appointment_link: prismicT.LinkField;
-    /**
-     * book appointment text field in *LandingPage → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: landing_page.primary.book_appointment_text
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    book_appointment_text: prismicT.KeyTextField;
-    /**
-     * background image desktop field in *LandingPage → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: landing_page.primary.background_image_desktop
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    background_image_desktop: prismicT.ImageField<never>;
-    /**
-     * background image tablet field in *LandingPage → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: landing_page.primary.background_image_tablet
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    background_image_tablet: prismicT.ImageField<never>;
-    /**
-     * background image mobile field in *LandingPage → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: landing_page.primary.background_image_mobile
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    background_image_mobile: prismicT.ImageField<never>;
-    /**
-     * welcome text field in *LandingPage → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: landing_page.primary.welcome_text
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    welcome_text: prismicT.RichTextField;
-}
-/**
- * Default variation for LandingPage Slice
- *
- * - **API ID**: `default`
- * - **Description**: `LandingPage`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type LandingPageSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<LandingPageSliceDefaultPrimary>, never>;
-/**
- * Slice variation for *LandingPage*
- *
- */
-type LandingPageSliceVariation = LandingPageSliceDefault;
-/**
- * LandingPage Shared Slice
- *
- * - **API ID**: `landing_page`
- * - **Description**: `LandingPage`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type LandingPageSlice = prismicT.SharedSlice<"landing_page", LandingPageSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { AboutusDocumentData, AboutusDocument, CompanyInfoDocumentData, CompanyInfoDocumentDataSlicesSlice, CompanyInfoDocument, ContactElementsDocumentData, ContactElementsDocument, DentistsDocumentData, DentistsDocumentDataSlicesSlice, DentistsDocument, FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, CompanyInfoSliceDefaultPrimary, CompanyInfoSliceDefault, CompanyInfoSliceVariation, CompanyInfoSlice, DentistSliceDefaultPrimary, DentistSliceDefault, DentistSliceVariation, DentistSlice, LandingPageSliceDefaultPrimary, LandingPageSliceDefault, LandingPageSliceVariation, LandingPageSlice };
+        export type { CompanyInfoDocumentData, CompanyInfoDocumentDataSlicesSlice, CompanyInfoDocument, ContactElementsDocumentData, ContactElementsDocument, DentistsDocumentData, DentistsDocumentDataSlicesSlice, DentistsDocument, FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, DentistSliceDefaultPrimary, DentistSliceDefault, DentistSliceVariation, DentistSlice };
     }
 }

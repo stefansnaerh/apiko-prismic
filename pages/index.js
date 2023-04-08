@@ -11,7 +11,7 @@ import styles from '../styles/Home.module.css'
 
 
 
-const Page = ({ heroContainer, compInfoContainer} ) => {
+const Index = ({ heroContainer, compInfoContainer} ) => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
 
   return (
@@ -37,7 +37,7 @@ const Page = ({ heroContainer, compInfoContainer} ) => {
   )
 }
  
-export default Page
+export default Index
  
 export async function getStaticProps({ previewData }) {
   const client = createClient({ previewData })
