@@ -1,20 +1,15 @@
-
-
-
 .container {
-    background-color: #FCF2EA;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 1rem;
+  background-color: #FCF2EA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
 }
-
 .container p {
-    margin-bottom: 0;
-    font-size: 1.2rem;
+  margin-bottom: 0;
+  font-size: 1.2rem;
 }
-
 .container div {
-    display: flex;
-    gap: 2rem;
-}
+  display: flex;
+  gap: 2rem;
+}/*# sourceMappingURL=footer.module.css.map */

@@ -1,7 +1,7 @@
 
 
 
-import styles from "./contactElements.module.css"
+import styles from "./contactElements.module.scss"
 import { RichText, Link } from "prismic-reactjs"
 import Image from "next/image"
 

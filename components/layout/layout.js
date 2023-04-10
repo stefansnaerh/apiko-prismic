@@ -5,7 +5,7 @@ import ContactElements from "../../customTypeComponents/contactElements/contactE
 import { useState } from "react"
 import { createClient } from "../../prismicio"
 
-import styles from './layout.module.css'
+import styles from './layout.module.scss'
 
 const Layout = ({navigationContainer, contactElementsContainer, footerContainer, children}) => {
     const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)

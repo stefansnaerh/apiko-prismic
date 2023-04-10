@@ -1,6 +1,6 @@
 
 
-import styles from './navigation.module.css'
+import styles from './navigation.module.scss'
 
 import { PrismicNextImage } from '@prismicio/next'
 import { RichText, Link } from "prismic-reactjs"

@@ -56,8 +56,10 @@
 
 
 @media screen and (max-width: 475px) {
-    .imageContainer img {
-        height: 649px;
+    .container {
+        .imageContainer img {
+            height: 649px;
+        }
     }
   }
   

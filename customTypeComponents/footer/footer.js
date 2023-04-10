@@ -1,5 +1,5 @@
 
-import styles from './footer.module.css'
+import styles from './footer.module.scss'
 
 import { RichText } from 'prismic-reactjs'
 
