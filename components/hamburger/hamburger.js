@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion'
-import styles from '../../customTypeComponents/navigation/navigation.module.css'
+import styles from './hamburger.module.scss'
 
 
 const HamburgerButton = ({isHamburgerOpen, setIsHamburgerOpen}) => {

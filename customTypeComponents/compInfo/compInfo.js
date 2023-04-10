@@ -1,5 +1,5 @@
 
-import styles from './compInfo.module.css'
+import styles from './compInfo.module.scss'
 
 import { RichText, Link } from 'prismic-reactjs'
 import { PrismicNextImage } from '@prismicio/next'

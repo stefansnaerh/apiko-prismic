@@ -52,7 +52,7 @@
 }
 
 @media screen and (max-width: 475px) {
-  .imageContainer img {
+  .container .imageContainer img {
     height: 649px;
   }
 }/*# sourceMappingURL=hero.module.css.map */
