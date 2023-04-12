@@ -12,6 +12,12 @@
       "default": {
         "primary": {}
       }
+    },
+    "TextWithSlidingImages": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   }
 }

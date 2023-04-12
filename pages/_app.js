@@ -4,12 +4,9 @@ import Link from 'next/link'
 import { PrismicProvider } from '@prismicio/react'
 import { PrismicPreview } from '@prismicio/next'
 import { linkResolver, repositoryName } from '../prismicio'
-
 import Layout from '../components/layout/layout'
-import Navigation from '../customTypeComponents/navigation/navigation'
 import { createClient } from '../prismicio'
 import NextApp, { AppProps } from 'next/app';
-import { useState } from 'react'
 
 
 
