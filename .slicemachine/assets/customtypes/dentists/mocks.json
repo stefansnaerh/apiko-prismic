@@ -1,13 +1,13 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "helpful"
+    "value": "danger"
   },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "dentist$27ba96c1-f2c6-4563-83a2-0e8902b514b4",
+        "key": "dentist$7ab044f4-0a51-4891-8996-bfe7a25a4cc3",
         "name": "dentist",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -17,9 +17,9 @@
               "__TYPE__": "StructuredTextContent",
               "value": [
                 {
-                  "type": "paragraph",
+                  "type": "heading2",
                   "content": {
-                    "text": "Sunt mollit officia ut duis et et pariatur irure dolor dolore excepteur exercitation."
+                    "text": "Gentle"
                   }
                 }
               ]
@@ -28,9 +28,9 @@
               "__TYPE__": "StructuredTextContent",
               "value": [
                 {
-                  "type": "paragraph",
+                  "type": "heading3",
                   "content": {
-                    "text": "Voluptate magna excepteur incididunt proident ex amet adipisicing minim."
+                    "text": "Share"
                   }
                 }
               ]
@@ -39,13 +39,13 @@
               "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
-                "width": 4172,
-                "height": 4000
+                "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+                "width": 4272,
+                "height": 2848
               },
-              "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
-              "width": 4172,
-              "height": 4000,
+              "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?rect=0%2C0%2C4272%2C2848&w=300&h=200",
+              "width": 300,
+              "height": 200,
               "edit": {
                 "zoom": 1,
                 "crop": {

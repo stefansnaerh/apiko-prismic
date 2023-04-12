@@ -79,7 +79,7 @@ interface CompanyInfoDocumentData {
  * Slice for *Company Info → Slice Zone*
  *
  */
-type CompanyInfoDocumentDataSlicesSlice = never;
+type CompanyInfoDocumentDataSlicesSlice = TextWithSlidingImagesSlice;
 /**
  * Company Info document from Prismic
  *
@@ -703,11 +703,76 @@ type DentistSliceVariation = DentistSliceDefault;
  *
  */
 export type DentistSlice = prismicT.SharedSlice<"dentist", DentistSliceVariation>;
+/**
+ * Primary content in TextWithSlidingImages → Primary
+ *
+ */
+interface TextWithSlidingImagesSliceDefaultPrimary {
+    /**
+     * Title field in *TextWithSlidingImages → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: text_with_sliding_images.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * paragraph field in *TextWithSlidingImages → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text_with_sliding_images.primary.paragraph
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    paragraph: prismicT.RichTextField;
+}
+/**
+ * Item in TextWithSlidingImages → Items
+ *
+ */
+export interface TextWithSlidingImagesSliceDefaultItem {
+    /**
+     * slideImage field in *TextWithSlidingImages → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text_with_sliding_images.items[].slideImage
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    slideImage: prismicT.ImageField<never>;
+}
+/**
+ * Default variation for TextWithSlidingImages Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `TextWithSlidingImages`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TextWithSlidingImagesSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TextWithSlidingImagesSliceDefaultPrimary>, Simplify<TextWithSlidingImagesSliceDefaultItem>>;
+/**
+ * Slice variation for *TextWithSlidingImages*
+ *
+ */
+type TextWithSlidingImagesSliceVariation = TextWithSlidingImagesSliceDefault;
+/**
+ * TextWithSlidingImages Shared Slice
+ *
+ * - **API ID**: `text_with_sliding_images`
+ * - **Description**: `TextWithSlidingImages`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TextWithSlidingImagesSlice = prismicT.SharedSlice<"text_with_sliding_images", TextWithSlidingImagesSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { CompanyInfoDocumentData, CompanyInfoDocumentDataSlicesSlice, CompanyInfoDocument, ContactElementsDocumentData, ContactElementsDocument, DentistsDocumentData, DentistsDocumentDataSlicesSlice, DentistsDocument, FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, DentistSliceDefaultPrimary, DentistSliceDefault, DentistSliceVariation, DentistSlice };
+        export type { CompanyInfoDocumentData, CompanyInfoDocumentDataSlicesSlice, CompanyInfoDocument, ContactElementsDocumentData, ContactElementsDocument, DentistsDocumentData, DentistsDocumentDataSlicesSlice, DentistsDocument, FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, DentistSliceDefaultPrimary, DentistSliceDefault, DentistSliceVariation, DentistSlice, TextWithSlidingImagesSliceDefaultPrimary, TextWithSlidingImagesSliceDefaultItem, TextWithSlidingImagesSliceDefault, TextWithSlidingImagesSliceVariation, TextWithSlidingImagesSlice };
     }
 }

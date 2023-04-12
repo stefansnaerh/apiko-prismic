@@ -1,12 +1,7 @@
 
 import { createClient } from '../prismicio'
-import { useState } from 'react'
 import { SliceZone } from '@prismicio/react'
 import { components } from '../slices'
-import Navigation from "../customTypeComponents/navigation/navigation"
-import ContactElements from "../customTypeComponents/contactElements/contactElements"
-import Footer from "../customTypeComponents/footer/footer"
-
 import styles from '../styles/Home.module.css'
 
 
