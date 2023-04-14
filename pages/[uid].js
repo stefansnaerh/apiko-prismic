@@ -19,12 +19,10 @@ const Page = ({pageContainer}) => {
           <PrismicNextImage
           field={pageContainer.data.image}
           height= "265"
-        
           />
         </div>
         <div className={styles.textLinkContainer}>
           <RichText render={pageContainer.data.title} />
-          <span className={styles.yellowLine}></span>
           <RichText render={pageContainer.data.paragraph}/>
           {/* Ask about this way to link between pages */ }
           <a  href={`/${pageContainer.data.read_more_link.slug}`}>

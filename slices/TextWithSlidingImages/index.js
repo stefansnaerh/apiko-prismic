@@ -9,25 +9,19 @@ const TextWithSlidingImages = ({ slice }) => (
       <RichText render={slice.primary.title}/>
       <RichText render={slice.primary.paragraph}/>
     </div>
-     <div className={styles.imagesContainer}>
-
-    { slice?.items?.map((item, i) => { 
+    <div className={styles.imagesContainer}>
+    {slice?.items?.map((item, i) => { 
       console.log(item)
       return (
-    <>
-    <PrismicNextImage
-      field={item.slideImage} 
-      width={350}
-      height={250} 
-     />
-     </>)})}
-
-      <PrismicNextImage
-        field={slice.primary.imageone}
-        width={350}
-        height={250} 
+      <>
+        <PrismicNextImage
+          field={item.slideImage} 
+          width={350}
+          height={250} 
         />
-        </div>
+      </>
+     )})}
+    </div>
   </section>
 )
 
