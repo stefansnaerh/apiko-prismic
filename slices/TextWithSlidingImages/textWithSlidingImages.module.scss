@@ -2,14 +2,44 @@
 
 
 .container {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 1rem 0rem 2rem 0rem;
-        .imagesContainer {
-          
+        overflow-x: hidden;
+        .imagesContainer {  
+           height: 250px;
+           width: 350px;
+           position: relative;
             img {
+                position: absolute;
+                left: 0; 
+                right: 0; 
+                margin-left: auto; 
+                margin-right: auto; 
                 border-radius: 5px;
+                z-index: 0;
+            }
+
+            .chevronRight, .chevronLeft {
+                position: absolute;
+                z-index: 1;
+                height: 36px;
+                width: 36px;
+                border-radius: 50%;
+                background-color: #F5F5F5;
+                top: 0;
+                bottom: 0;
+                margin: auto; 
+                display: flex;
+                align-items: center;
+            }
+            .chevronLeft {
+                left: 10px; 
+            }
+            .chevronRight {
+                right: 10px;
             }
         }
         .textContainer {
