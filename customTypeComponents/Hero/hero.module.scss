@@ -51,6 +51,9 @@
                 font-size: 1.4rem;
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             }
+            span:hover { 
+                background-color: #B58F65;
+            }
         }
     }
 }
@@ -65,3 +68,22 @@
     }
   }
   
+
+  @media (min-width: 900px){
+    .container {
+       
+        .sloganButtonsContainer {
+            top: 25%;
+            left: 15%;
+            h1 {
+                font-size: 2.4rem;
+            }
+            .buttonsContainer {
+                span {
+                    font-size: 1.6rem;
+                    align-items: center;
+                }
+            }
+        }
+    }
+  }

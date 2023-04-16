@@ -1,0 +1,26 @@
+
+
+
+.nav {
+   ul {
+    display: flex;
+    list-style: none;
+    font-size: 1.8rem;
+    font-weight: 300;
+    gap: 3rem;
+    margin-right: 3rem;
+   }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+        .nav {
+            display: none;
+        }
+  }
+  

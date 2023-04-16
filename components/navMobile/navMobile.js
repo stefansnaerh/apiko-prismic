@@ -1,37 +1,16 @@
 
-
-import styles from './navigation.module.scss'
-
-import { PrismicNextImage } from '@prismicio/next'
-import { RichText, Link } from "prismic-reactjs"
+import styles from './navMobile.module.scss'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-
-import HamburgerButton from '../../components/hamburger/hamburger'
+import { Link } from 'prismic-reactjs'
 
 import calendarIcon from '../../public/calendar.svg'
 import phoneIcon from '../../public/phone.png'
 
-const Navigation = ( {navigationContainer, isHamburgerOpen, setIsHamburgerOpen} ) => {
+
+const NavMobile = ({ navigationContainer, isHamburgerOpen }) => {
     return (
-        
-        <header className={styles.header}>
-            <a href={"/"}>
-                <PrismicNextImage 
-                field={navigationContainer.data.logo} 
-                alt={""}
-                height="70"
-                /> 
-            </a>
-            <div className={styles.logoTextContainer}>
-                <RichText render={navigationContainer.data.logo_text} />
-                <RichText render={navigationContainer.data.logo_subtext} />
-            </div>
-            <HamburgerButton
-            isHamburgerOpen={isHamburgerOpen}
-            setIsHamburgerOpen={setIsHamburgerOpen}
-            />
-            <motion.nav 
+        <motion.nav 
             className={styles.navbar}
             animate={isHamburgerOpen ? {x:-800}: {x : 0}}
             transition={{duration:0.5}}
@@ -61,7 +40,7 @@ const Navigation = ( {navigationContainer, isHamburgerOpen, setIsHamburgerOpen} 
                             {navigationContainer.data.phone_number_text }
                         </span>
                     </a>
-                    <a href={Link.url(navigationContainer.data.book_appointment_link)}>
+                    <a href={`/${navigationContainer.data.book_appointment_link.uid}`}>
                         <span >
                             <Image src={calendarIcon}  alt="calendar icon"/>
                             {navigationContainer.data.book_appointment_text }
@@ -69,8 +48,7 @@ const Navigation = ( {navigationContainer, isHamburgerOpen, setIsHamburgerOpen} 
                     </a>
                 </div>
             </motion.nav>
-        </header>
     )
 }
 
-export default Navigation
+export default NavMobile

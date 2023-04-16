@@ -1,0 +1,149 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "market"
+  },
+  "title": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "heading1",
+        "content": {
+          "text": "Cabin"
+        }
+      }
+    ]
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "inputs$3a434004-0f55-41cd-8b98-42f200209856",
+        "name": "inputs",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "input_button_link": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            },
+            "input_button_text": {
+              "__TYPE__": "FieldContent",
+              "value": "hair",
+              "type": "Text"
+            },
+            "input_big": {
+              "__TYPE__": "FieldContent",
+              "value": "save",
+              "type": "Text"
+            },
+            "input_big_headline": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Laboris dolore ipsum eu ea anim. Anim laborum cillum laborum ea est labore in minim ipsum ipsum. Fugiat magna pariatur do id magna."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "input_small",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "heavy",
+                    "type": "Text"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "key": "text$2305931d-b4ce-402a-82dc-aca90ea4b6d1",
+        "name": "text",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "paragraph": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Voluptate aute mollit id exercitation commodo laborum nulla laborum est ipsum ex commodo ipsum consectetur."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "list",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "blank",
+                    "type": "Text"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "key": "text_with_title$3ccc0915-e3fe-4010-bce9-9d23637a7328",
+        "name": "text_with_title",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading2",
+                  "content": {
+                    "text": "Worth"
+                  }
+                }
+              ]
+            },
+            "paragraph": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Aliquip esse laboris Lorem deserunt elit eu qui exercitation dolor quis ad. Adipisicing irure eiusmod in. Nulla occaecat qui aute et deserunt id enim enim elit cupidatat nulla anim."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

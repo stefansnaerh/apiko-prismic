@@ -1,0 +1,34 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "paragraph": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Id nulla elit officia ex sit voluptate quis. In nostrud pariatur cupidatat minim eu duis voluptate. Aute irure elit consectetur laboris aliqua eu adipisicing velit reprehenderit officia sunt."
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "list",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "field",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

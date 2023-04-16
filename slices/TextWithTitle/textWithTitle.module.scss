@@ -1,0 +1,15 @@
+
+
+
+.container {
+    width: clamp(20rem, 80%, 40rem);
+    h2 {
+        font-size: 1.6rem;
+        font-weight: 400;
+        border-bottom: 3px solid #EBB45E;
+        width: fit-content;
+    }
+    p {
+        font-size: 1.4rem;
+    }
+}

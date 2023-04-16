@@ -5,15 +5,15 @@ import * as prismicH from "@prismicio/helpers";
 import { RichText, Link } from 'prismic-reactjs'
 import { PrismicNextImage } from '@prismicio/next'
 
-import styles from '../styles/uid.module.scss'
+import styles from '../styles/uid/uid.module.scss'
 
 import { SliceZone } from '@prismicio/react'
 import { components } from '../slices'
 
 
 const Page = ({pageContainer}) => {
-  console.log(pageContainer)
     return (
+      <div className={styles.pageContainer}>
       <section className={styles.container}>
         <div className={styles.imageContainer}>
           <PrismicNextImage
@@ -29,8 +29,9 @@ const Page = ({pageContainer}) => {
              { <span className={styles.button}>{pageContainer.data.read_more_link.uid.charAt(0).toUpperCase() + pageContainer.data.read_more_link.uid.slice(1)}</span>}
           </a>: null}
         </div>
-      <SliceZone slices={pageContainer.data.slices} components={components}   />
       </section>
+      <SliceZone slices={pageContainer.data.slices} components={components}   />
+      </div>
     )
 }
 

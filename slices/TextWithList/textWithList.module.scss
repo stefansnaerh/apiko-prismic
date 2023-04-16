@@ -1,0 +1,15 @@
+
+
+
+.container {
+    width: clamp(20rem, 80%, 40rem);
+    p {
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+    ul {
+        list-style:disc;
+        font-size:1.4rem;
+    }
+
+}

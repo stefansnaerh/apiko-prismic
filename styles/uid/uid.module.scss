@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    padding: 0rem 0 2rem 0;
     .imageContainer {
         overflow: hidden;
         display: flex;
@@ -46,13 +47,36 @@
             font-size: 1.4rem;
             padding: 5px 24px 5px 24px;
         }
+        .button:hover {
+            background-color: #FFCC7D;
+        }
     }
     
 }
 
 
-.container>section:nth-child(odd) {
+.pageContainer>section:nth-child(even) {
     background-color: #f7eee7;
 }
+
+
+
+
+
+@media (min-width: 768px) {
+    .container{
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        padding: 3rem 0 4rem 0 ;
+        .textLinkContainer {
+            width: 22rem;
+            align-items: flex-start;
+        }
+    }
+
+}
+
+
+
 
 

@@ -1,0 +1,56 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "input_button_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      "input_button_text": {
+        "__TYPE__": "FieldContent",
+        "value": "motion",
+        "type": "Text"
+      },
+      "input_big": {
+        "__TYPE__": "FieldContent",
+        "value": "rhyme",
+        "type": "Text"
+      },
+      "input_big_headline": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Magna commodo duis quis sit ipsum elit Lorem non nostrud do. Minim tempor consequat occaecat deserunt reprehenderit adipisicing velit adipisicing velit dolore eu et."
+            }
+          }
+        ]
+      },
+      "input_big_placeholder": {
+        "__TYPE__": "FieldContent",
+        "value": "foreign",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "input_small",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "roll",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

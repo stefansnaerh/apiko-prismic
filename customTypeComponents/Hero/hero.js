@@ -9,13 +9,13 @@ import calendarIcon from '../../public/calendar.svg'
 
 
 const Hero = ({ heroContainer, isHamburgerOpen }) => {
-
   return (
     <section className={styles.container}>
         <div className={styles.imageContainer}>
             <PrismicNextImage 
                 field={heroContainer.data.cover_photo_desktop}
                 alt={heroContainer.data.cover_photo}
+                priority 
                />
         </div>
         {!isHamburgerOpen ?  (
@@ -25,7 +25,7 @@ const Hero = ({ heroContainer, isHamburgerOpen }) => {
             <a  href={Link.url(heroContainer.data.about_company_link)}>
               <span >{heroContainer.data.about_link_text }</span>
             </a>
-            <a  href={Link.url(heroContainer.data.book_appointment_link)}> 
+            <a  href={`/${heroContainer.data.book_appointment_link.uid}`}> 
               <span >
                 <Image src={calendarIcon} height="18" alt="phone icon"/>
                 {heroContainer.data.book_appointment_text }

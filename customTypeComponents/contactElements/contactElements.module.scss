@@ -22,7 +22,7 @@
    }
    .yellowLine {
     background-color: #EBB45E;
-    width: 80%;
+    width: clamp(20rem, 80%, 32rem);
     height: 3px;
     }
     .button {
@@ -39,7 +39,31 @@
         font-weight: 400;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
+    .button:hover {
+        background-color: #B58F65;
+    }
 }
 
 
 
+@media (min-width: 768px){
+    .container {
+        flex-direction: row;
+        height: 200px;
+        justify-content: center;
+        gap: 4rem;
+        .yellowLine {
+            height: 160px;
+            width: 3px;
+        }
+        div {
+            width: 200px;
+            p {
+                font-size: 1.6rem;
+            }
+            .button {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
