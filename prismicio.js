@@ -12,6 +12,8 @@ export function linkResolver(doc) {
       return '/'
     case 'company_info':
       return `/${doc.uid}`
+    case 'book_appointment' :
+      return '/bookAppointment'
     default:
       return null
   }

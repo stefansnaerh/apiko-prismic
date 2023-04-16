@@ -6,6 +6,46 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for book appointment documents */
+interface BookAppointmentDocumentData {
+    /**
+     * title field in *book appointment*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: book_appointment.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Slice Zone field in *book appointment*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: book_appointment.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<BookAppointmentDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *book appointment → Slice Zone*
+ *
+ */
+type BookAppointmentDocumentDataSlicesSlice = InputsSlice | TextSlice | TextWithTitleSlice;
+/**
+ * book appointment document from Prismic
+ *
+ * - **API ID**: `book_appointment`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BookAppointmentDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<BookAppointmentDocumentData>, "book_appointment", Lang>;
 /** Content for Company Info documents */
 interface CompanyInfoDocumentData {
     /**
@@ -643,7 +683,7 @@ type NavigationDocumentDataSlicesSlice = never;
  * @typeParam Lang - Language API ID of the document.
  */
 export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
-export type AllDocumentTypes = CompanyInfoDocument | ContactElementsDocument | DentistsDocument | FooterDocument | HomepageDocument | NavigationDocument;
+export type AllDocumentTypes = BookAppointmentDocument | CompanyInfoDocument | ContactElementsDocument | DentistsDocument | FooterDocument | HomepageDocument | NavigationDocument;
 /**
  * Primary content in Dentist → Primary
  *
@@ -703,6 +743,156 @@ type DentistSliceVariation = DentistSliceDefault;
  *
  */
 export type DentistSlice = prismicT.SharedSlice<"dentist", DentistSliceVariation>;
+/**
+ * Primary content in Inputs → Primary
+ *
+ */
+interface InputsSliceDefaultPrimary {
+    /**
+     * input button link field in *Inputs → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: inputs.primary.input_button_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    input_button_link: prismicT.LinkField;
+    /**
+     * input button text field in *Inputs → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: inputs.primary.input_button_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    input_button_text: prismicT.KeyTextField;
+    /**
+     * input big field in *Inputs → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: inputs.primary.input_big
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    input_big: prismicT.KeyTextField;
+    /**
+     * input big headline field in *Inputs → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: inputs.primary.input_big_headline
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    input_big_headline: prismicT.RichTextField;
+    /**
+     * input big placeholder field in *Inputs → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: inputs.primary.input_big_placeholder
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    input_big_placeholder: prismicT.KeyTextField;
+}
+/**
+ * Item in Inputs → Items
+ *
+ */
+export interface InputsSliceDefaultItem {
+    /**
+     * input small field in *Inputs → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: inputs.items[].input_small
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    input_small: prismicT.KeyTextField;
+}
+/**
+ * Default variation for Inputs Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Inputs`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type InputsSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<InputsSliceDefaultPrimary>, Simplify<InputsSliceDefaultItem>>;
+/**
+ * Slice variation for *Inputs*
+ *
+ */
+type InputsSliceVariation = InputsSliceDefault;
+/**
+ * Inputs Shared Slice
+ *
+ * - **API ID**: `inputs`
+ * - **Description**: `Inputs`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type InputsSlice = prismicT.SharedSlice<"inputs", InputsSliceVariation>;
+/**
+ * Primary content in TextWithList → Primary
+ *
+ */
+interface TextSliceDefaultPrimary {
+    /**
+     * paragraph field in *TextWithList → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: text.primary.paragraph
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    paragraph: prismicT.RichTextField;
+}
+/**
+ * Item in TextWithList → Items
+ *
+ */
+export interface TextSliceDefaultItem {
+    /**
+     * list field in *TextWithList → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text.items[].list
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    list: prismicT.KeyTextField;
+}
+/**
+ * Default variation for TextWithList Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Text`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TextSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TextSliceDefaultPrimary>, Simplify<TextSliceDefaultItem>>;
+/**
+ * Slice variation for *TextWithList*
+ *
+ */
+type TextSliceVariation = TextSliceDefault;
+/**
+ * TextWithList Shared Slice
+ *
+ * - **API ID**: `text`
+ * - **Description**: `Text`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TextSlice = prismicT.SharedSlice<"text", TextSliceVariation>;
 /**
  * Primary content in TextWithSlidingImages → Primary
  *
@@ -768,11 +958,60 @@ type TextWithSlidingImagesSliceVariation = TextWithSlidingImagesSliceDefault;
  *
  */
 export type TextWithSlidingImagesSlice = prismicT.SharedSlice<"text_with_sliding_images", TextWithSlidingImagesSliceVariation>;
+/**
+ * Primary content in TextWithTitle → Primary
+ *
+ */
+interface TextWithTitleSliceDefaultPrimary {
+    /**
+     * Title field in *TextWithTitle → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: text_with_title.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * paragraph field in *TextWithTitle → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text_with_title.primary.paragraph
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    paragraph: prismicT.RichTextField;
+}
+/**
+ * Default variation for TextWithTitle Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `TextWithTitle`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TextWithTitleSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TextWithTitleSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *TextWithTitle*
+ *
+ */
+type TextWithTitleSliceVariation = TextWithTitleSliceDefault;
+/**
+ * TextWithTitle Shared Slice
+ *
+ * - **API ID**: `text_with_title`
+ * - **Description**: `TextWithTitle`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TextWithTitleSlice = prismicT.SharedSlice<"text_with_title", TextWithTitleSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { CompanyInfoDocumentData, CompanyInfoDocumentDataSlicesSlice, CompanyInfoDocument, ContactElementsDocumentData, ContactElementsDocument, DentistsDocumentData, DentistsDocumentDataSlicesSlice, DentistsDocument, FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, DentistSliceDefaultPrimary, DentistSliceDefault, DentistSliceVariation, DentistSlice, TextWithSlidingImagesSliceDefaultPrimary, TextWithSlidingImagesSliceDefaultItem, TextWithSlidingImagesSliceDefault, TextWithSlidingImagesSliceVariation, TextWithSlidingImagesSlice };
+        export type { BookAppointmentDocumentData, BookAppointmentDocumentDataSlicesSlice, BookAppointmentDocument, CompanyInfoDocumentData, CompanyInfoDocumentDataSlicesSlice, CompanyInfoDocument, ContactElementsDocumentData, ContactElementsDocument, DentistsDocumentData, DentistsDocumentDataSlicesSlice, DentistsDocument, FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, DentistSliceDefaultPrimary, DentistSliceDefault, DentistSliceVariation, DentistSlice, InputsSliceDefaultPrimary, InputsSliceDefaultItem, InputsSliceDefault, InputsSliceVariation, InputsSlice, TextSliceDefaultPrimary, TextSliceDefaultItem, TextSliceDefault, TextSliceVariation, TextSlice, TextWithSlidingImagesSliceDefaultPrimary, TextWithSlidingImagesSliceDefaultItem, TextWithSlidingImagesSliceDefault, TextWithSlidingImagesSliceVariation, TextWithSlidingImagesSlice, TextWithTitleSliceDefaultPrimary, TextWithTitleSliceDefault, TextWithTitleSliceVariation, TextWithTitleSlice };
     }
 }

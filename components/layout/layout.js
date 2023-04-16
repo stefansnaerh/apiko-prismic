@@ -1,5 +1,5 @@
 
-import Navigation from "../../customTypeComponents/navigation/navigation"
+import Header from "../../customTypeComponents/header/header"
 import Footer from "../../customTypeComponents/footer/footer"
 import ContactElements from "../../customTypeComponents/contactElements/contactElements"
 import { useState } from "react"
@@ -11,7 +11,7 @@ const Layout = ({navigationContainer, contactElementsContainer, footerContainer,
     const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
     return (
         <>
-            <Navigation
+            <Header
             navigationContainer={navigationContainer}
             isHamburgerOpen={isHamburgerOpen}
             setIsHamburgerOpen={setIsHamburgerOpen}

@@ -5,7 +5,8 @@
     "navigation": {},
     "contact_elements": {},
     "footer": {},
-    "dentists": {}
+    "dentists": {},
+    "book_appointment": {}
   },
   "slices": {
     "Dentist": {
@@ -17,6 +18,27 @@
       "default": {
         "primary": {},
         "items": {}
+      }
+    },
+    "Inputs": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "Text": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "TextWithTitle": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "TextWithList": {
+      "default": {
+        "primary": {}
       }
     }
   }

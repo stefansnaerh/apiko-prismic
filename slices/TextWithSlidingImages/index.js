@@ -16,17 +16,14 @@ const TextWithSlidingImages = ({ slice }) => {
 
   // counting nr of images and adding 1 so it goes to 0 if the counter goes over nr of images
   const imgCount = slice.items.length
-  console.log(imgCount)
   const slideRight = () => {
    if(index === imgCount){
     setIndex(index - imgCount)
    } else {
     setIndex(index +1)
    }
-
    console.log(index)
   }
-  console.log(slice.items)
 
   return (
   <section className={styles.container}>
@@ -48,7 +45,6 @@ const TextWithSlidingImages = ({ slice }) => {
         />
       </div>
     {slice?.items?.map((item, i) => { 
-      console.log(item)
       return (
       <motion.div 
       key={i}

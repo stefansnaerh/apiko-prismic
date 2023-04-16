@@ -7,7 +7,6 @@ import { PrismicNextImage } from '@prismicio/next'
 
 
 const CompanyInfo = (compInfo) => {
-    console.log(compInfo)
     return (
         <section className={styles.container}>
         <div className={styles.textLinkContainer}>
