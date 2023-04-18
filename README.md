@@ -5,7 +5,8 @@
 My research plan subject is "What value does Prismic bring to your project as a headless cms?"
 
 I am making a website with Prismic + NextJS and a presentation about Prismic.  
-[The website is live and you can visit it by clicking here.](https://apiko-prismic-qyr3k44rm-stefansnaerh.vercel.app/)  
+[The website is live and you can visit it by clicking here.](https://apiko-prismic-qyr3k44rm-stefansnaerh.vercel.app/)
+
 Its a design I made in module 6 design sprint.
 [Here is the figma file if you want to see.](https://www.figma.com/file/iLa5eqOlEfRa3qOuHwxalK/S%C3%AD%C3%B0a-fyrir-D%C3%B6nu?node-id=303%3A219&t=BtarbpycRwtnEa6a-1)
 
