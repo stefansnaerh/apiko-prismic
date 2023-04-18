@@ -21,6 +21,7 @@ const Layout = ({navigationContainer, contactElementsContainer, footerContainer,
         <>
             <Head>
               <title>{navigationContainer.data.website_title}</title>
+              <meta property="og:title" content={navigationContainer.data.website_title} key="title" />
             </Head>
             <Header
             navigationContainer={navigationContainer}
