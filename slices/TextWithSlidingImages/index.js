@@ -57,6 +57,7 @@ console.log(slice)
           src={item.slideimage.url} 
           width={350}
           height={250} 
+          
         />
       </motion.div>
      )})}

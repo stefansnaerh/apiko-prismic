@@ -18,7 +18,8 @@
     "prismic-reactjs": "^1.3.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-imgix": "^9.7.0"
+    "react-imgix": "^9.7.0",
+    "sass": "^1.62.0"
   },
   "devDependencies": {
     "@prismicio/types": "^0.2.7",
