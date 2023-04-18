@@ -20,7 +20,11 @@ const Layout = ({navigationContainer, contactElementsContainer, footerContainer,
     return (
         <>
             <Head>
+          
               <title>{navigationContainer.data.website_title}</title>
+              <meta name="description" content={"here i would link a description from header"}/>
+              <meta name="keywords" content="HTML, CSS, JavaScript, NextJS, Prismic"/>
+              <meta name="author" content="Stefán Snær"/>
               <meta property="og:title" content={navigationContainer.data.website_title} key="title" />
             </Head>
             <Header
