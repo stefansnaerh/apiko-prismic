@@ -1,3 +1,25 @@
+### Module 7 - final project
+
+# Project
+
+My research plan subject is "What value does Prismic bring to your project as a headless cms?"
+
+I am making a website with Prismic + NextJS and a presentation about Prismic.  
+[The website is live and you can visit it by clicking here.](https://apiko-prismic-qyr3k44rm-stefansnaerh.vercel.app/)
+Its a design I made in module 6 design sprint.
+[Here is the figma file if you want to see.](https://www.figma.com/file/iLa5eqOlEfRa3qOuHwxalK/S%C3%AD%C3%B0a-fyrir-D%C3%B6nu?node-id=303%3A219&t=BtarbpycRwtnEa6a-1)
+
+It´s still not fully ready, the slider in the Um Okkur/about page is not working like it should and some elements are not fully responsive yet.
+
+## Presentation
+
+Im still working on the presentations but I will talk about prismic and its value, what I learned
+and what I liked about it.
+
+## Workshop
+
+For the workshop I want participants to be able to add elements with their data through the Prismic client.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
