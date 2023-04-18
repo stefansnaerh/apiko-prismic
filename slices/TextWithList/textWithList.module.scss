@@ -3,13 +3,30 @@
 
 .container {
     width: clamp(20rem, 80%, 40rem);
-    p {
-        font-size: 1.4rem;
-        font-weight: 400;
-    }
     ul {
         list-style:disc;
-        font-size:1.4rem;
+        font-size:1.6rem;
     }
 
+}
+
+
+
+@media (min-width: 968px) {
+    .container {
+        grid-column:  2/3;
+        grid-row:  2/ 3;
+        align-self: flex-end;
+      
+    }
+}
+
+@media (min-width: 1328px) {
+    .container {
+        width: clamp(20rem, 100%, 60rem);
+        justify-self: center;
+        ul {
+            font-size: 2rem;
+        }
+    }
 }

@@ -48,18 +48,31 @@
 }
 
 
+@media (min-width: 565px) {
+    .container {
+        .textLinkContainer {
+            h2 {
+                font-size: 2.4rem;
+            }
+            p {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
 
 
 
-
-@media (min-width: 768px) {
+@media (min-width: 875px) {
     .container{
         flex-direction: row;
         justify-content: space-around;
         padding: 3rem 0 4rem 0 ;
+        height: 400px;
         .textLinkContainer {
             width: clamp(22rem, 30%, 40rem);
             align-items: flex-start;
+          
             p {
                 font-size: 1.6rem;
             }
@@ -72,3 +85,23 @@
 }
 
 
+@media (min-width:1340px) {
+    .container {
+        justify-content: center;
+        gap: 10%;
+        height: fit-content;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+        .textLinkContainer {
+            h2 {
+                font-size: 2.8rem;
+            }
+            p {
+                font-size: 2rem;
+            }
+            .button {
+                font-size: 2rem;
+            }
+        }
+    }
+}

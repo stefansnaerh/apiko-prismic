@@ -33,9 +33,7 @@
           "type": "Image",
           "config": {
             "label": "profile image",
-            "constraint": {
-              "width": 300
-            },
+            "constraint": {},
             "thumbnails": []
           }
         }

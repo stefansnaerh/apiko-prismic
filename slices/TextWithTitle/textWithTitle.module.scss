@@ -4,12 +4,31 @@
 .container {
     width: clamp(20rem, 80%, 40rem);
     h2 {
-        font-size: 1.6rem;
+        font-size: 2rem;
         font-weight: 400;
         border-bottom: 3px solid #EBB45E;
         width: fit-content;
     }
     p {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
+    }
+}
+
+
+@media (min-width: 968px) {
+    .container {
+        grid-column: 2/3;
+        grid-row: 3/3;
+        align-self: flex-start;
+    }
+}
+
+@media (min-width: 1328px){
+    .container {
+        justify-self: center;
+        width: clamp(20rem, 100%, 60rem);
+        h2 {
+            font-size: 2.4rem;
+        }
     }
 }

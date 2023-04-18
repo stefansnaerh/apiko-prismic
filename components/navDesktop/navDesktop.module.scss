@@ -7,20 +7,73 @@
     list-style: none;
     font-size: 1.8rem;
     font-weight: 300;
-    gap: 3rem;
+    gap: 2.8rem;
     margin-right: 3rem;
+    align-items: center;
+    li {
+        cursor: pointer;
+    }
+    button {
+        border: none;
+        background: none;
+        font-family: 'Poppins';
+        font-size: 1.8rem;
+        font-weight: 300;
+        }
+    span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        
+        justify-content: center;
+        background-color: #977045;
+        color: #FFFFFF;
+        border-radius: 5px;
+        width: 140px;
+        height: 38px;
+        font-size: 1.8rem;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    span:hover {
+        background-color: #B58F65;
+    }
    }
+
+}
+
+@media screen and (max-width: 1090px) {
+    .nav {
+        ul {
+            span {
+                display: none;
+            }
+        }
+    }
 }
 
 
-
-
-
-
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
         .nav {
             display: none;
         }
   }
   
+
+  @media screen and (min-width: 1090px) {
+    .nav {
+        ul {
+            font-size: 2rem;
+            button {
+                font-size: 2rem;
+            }
+        }
+    }
+  }
+
+  @media screen and (min-width: 1328px){
+    .nav {
+        ul {
+            gap: 5rem;
+        }
+    }
+  }

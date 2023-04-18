@@ -31,14 +31,11 @@
         }
       },
       "items": {
-        "slideImage": {
+        "slideimage": {
           "type": "Image",
           "config": {
             "label": "slideImage",
-            "constraint": {
-              "width": 430,
-              "height": 370
-            },
+            "constraint": {},
             "thumbnails": []
           }
         }

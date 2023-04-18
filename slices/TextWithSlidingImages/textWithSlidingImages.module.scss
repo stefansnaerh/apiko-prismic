@@ -18,17 +18,16 @@
                 right: 0; 
                 margin-left: auto; 
                 margin-right: auto; 
-                border-radius: 5px;
                 z-index: 0;
             }
 
             .chevronRight, .chevronLeft {
                 position: absolute;
-                z-index: 1;
+                z-index: 99;
                 height: 36px;
                 width: 36px;
                 border-radius: 50%;
-                background-color: #F5F5F5;
+                background-color: #f5f5f5c3;
                 top: 0;
                 bottom: 0;
                 margin: auto; 

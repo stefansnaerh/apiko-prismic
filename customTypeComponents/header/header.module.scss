@@ -11,6 +11,9 @@
     justify-content: space-between;
     a {
         display: flex;
+        img {
+            height: 70px;
+        }
     .logoTextContainer {
         display: flex;
         flex-direction: column;
@@ -35,5 +38,24 @@
 }
 
 
-
+@media screen and (min-width: 1090px) {
+    .header {
+        height: 90px;
+        align-items: center;
+        a {
+            img {
+                height: 90px;
+            }
+            .logoTextContainer {
+                margin-left: -12px;
+                h1 {
+                    font-size: 2.2rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
 
