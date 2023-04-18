@@ -22,10 +22,16 @@ const TextWithSlidingImages = ({ slice }) => {
     setIndex(index - imgCount)
    } else {
     setIndex(index +1)
-   }
-   console.log(index)
-  }
-console.log(slice)
+   }}
+
+   const slideLeft = () => {
+    if (index === 0){
+      setIndex(imgCount)
+    }
+    else {
+      setIndex(index -1)
+    }}
+
   return (
   <section className={styles.container}>
     <div className={styles.textContainer}>
@@ -39,14 +45,13 @@ console.log(slice)
         alt='chevron right'
         />
       </div>
-      <div className={styles.chevronLeft} onClick={() => setIndex(-1)}>
+      <div className={styles.chevronLeft} onClick={slideLeft}>
         <Image
         src={chevronLeft}
         alt='chevron right'
         />
       </div>
     {slice?.items?.map((item, i) => { 
-      console.log(item)
       return (
       <motion.div 
       key={i}
@@ -57,7 +62,7 @@ console.log(slice)
           src={item.slideimage.url} 
           width={350}
           height={250} 
-          
+
         />
       </motion.div>
      )})}

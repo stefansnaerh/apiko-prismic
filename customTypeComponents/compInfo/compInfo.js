@@ -1,8 +1,7 @@
 
 import styles from './compInfo.module.scss'
 
-import { RichText, Link } from 'prismic-reactjs'
-import { PrismicNextImage } from '@prismicio/next'
+import { RichText } from 'prismic-reactjs'
 import Imgix from 'react-imgix'
 
 
@@ -14,7 +13,7 @@ const CompanyInfo = (compInfo) => {
         <RichText render={compInfo.compInfo.data.title} />
         <span className={styles.yellowLine}></span>
         <RichText render={compInfo.compInfo.data.paragraph}/>
-        <a  href={`/${compInfo.compInfo.uid}`}>
+        <a  href={`/${compInfo.compInfo.data.read_more_link.uid}`}>
             <span className={styles.button}>{compInfo.compInfo.data.read_more_text}</span>
         </a>
         </div>

@@ -10,6 +10,7 @@ import styles from '../styles/uid/uid.module.scss'
 
 
 const Page = ({pageContainer}) => {
+  console.log(pageContainer)
     return (
       <div className={styles.pageContainer}>
       <section className={styles.container}>
@@ -28,10 +29,10 @@ const Page = ({pageContainer}) => {
         <div className={styles.textLinkContainer}>
           <RichText render={pageContainer.data.title} />
           <RichText render={pageContainer.data.paragraph}/>
-          {/* Ask about this way to link between pages */ }
+          {/* Ask about this way to link between pages 
           {pageContainer.data.read_more_link.uid ? <a  href={`/${pageContainer.data.read_more_link.slug}`}>
              { <span className={styles.button}>{pageContainer.data.read_more_link.uid.charAt(0).toUpperCase() + pageContainer.data.read_more_link.uid.slice(1)}</span>}
-          </a>: null}
+      </a>: null}*/}
         </div>
       </section>
       <SliceZone slices={pageContainer.data.slices} components={components}   />
