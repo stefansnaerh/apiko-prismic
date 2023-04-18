@@ -657,6 +657,17 @@ interface NavigationDocumentData {
      */
     book_appointment_text: prismicT.KeyTextField;
     /**
+     * Website title field in *Navigation*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.website_title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    website_title: prismicT.KeyTextField;
+    /**
      * Slice Zone field in *Navigation*
      *
      * - **Field Type**: Slice Zone
@@ -929,11 +940,11 @@ export interface TextWithSlidingImagesSliceDefaultItem {
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
-     * - **API ID Path**: text_with_sliding_images.items[].slideImage
+     * - **API ID Path**: text_with_sliding_images.items[].slideimage
      * - **Documentation**: https://prismic.io/docs/core-concepts/image
      *
      */
-    slideImage: prismicT.ImageField<never>;
+    slideimage: prismicT.ImageField<never>;
 }
 /**
  * Default variation for TextWithSlidingImages Slice

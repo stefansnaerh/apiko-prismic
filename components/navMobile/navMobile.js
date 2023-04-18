@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { Link } from 'prismic-reactjs'
 
 import calendarIcon from '../../public/calendar.svg'
-import phoneIcon from '../../public/phone.png'
+import phoneIcon from '../../public/phone.svg'
 
 
 const NavMobile = ({ navigationContainer, isHamburgerOpen }) => {
@@ -36,13 +36,13 @@ const NavMobile = ({ navigationContainer, isHamburgerOpen }) => {
                 <div className={styles.buttonContainer}>
                     <a href={`Tel: ${navigationContainer.data.phone_text}`}>
                         <span className={styles.navButton}>
-                            <Image src={phoneIcon} height="26" alt="phone icon"/>
+                            <Image src={phoneIcon} height={28} width={24} alt="phone icon"/>
                             {navigationContainer.data.phone_number_text }
                         </span>
                     </a>
                     <a href={`/${navigationContainer.data.book_appointment_link.uid}`}>
                         <span >
-                            <Image src={calendarIcon}  alt="calendar icon"/>
+                            <Image src={calendarIcon} height={20}  alt="calendar icon"/>
                             {navigationContainer.data.book_appointment_text }
                         </span>
                     </a>

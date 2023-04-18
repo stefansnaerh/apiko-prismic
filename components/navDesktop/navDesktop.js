@@ -2,9 +2,11 @@
 
 import styles from './navDesktop.module.scss'
 import { Link } from 'prismic-reactjs'
+import Image from 'next/image'
+import calendarIcon from '../../public/calendar.svg'
 
 
-const NavDesktop = ( {navigationContainer} ) => {
+const NavDesktop = ( {navigationContainer, handleScrollContact} ) => {
     return (
         <nav className={styles.nav}>
             <ul>
@@ -21,8 +23,16 @@ const NavDesktop = ( {navigationContainer} ) => {
                     {/*<a href={Link.url(navigationContainer.data.service_link)}>
                         <li>{navigationContainer.data.service_text }</li>
                     </a>  */  }            
-                    <a href={Link.url(navigationContainer.data.contact_link)}>
-                        <li>{navigationContainer.data.contact_link_text }</li>
+                        <li  onClick={handleScrollContact}>
+                           
+                            {navigationContainer.data.contact_link_text }
+                        
+                        </li>
+                    <a href={`/${navigationContainer.data.book_appointment_link.uid}`}>
+                        <span >
+                            <Image src={calendarIcon} height={'20'}  alt="calendar icon"/>
+                            {navigationContainer.data.book_appointment_text }
+                        </span>
                     </a>
                 </ul>
         </nav>

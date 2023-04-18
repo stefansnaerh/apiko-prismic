@@ -2,13 +2,11 @@
 import { createClient, linkResolver } from "../prismicio"
 import * as prismicH from "@prismicio/helpers";
 
-import { RichText, Link } from 'prismic-reactjs'
-import { PrismicNextImage } from '@prismicio/next'
-
-import styles from '../styles/uid/uid.module.scss'
-
+import { RichText } from 'prismic-reactjs'
 import { SliceZone } from '@prismicio/react'
 import { components } from '../slices'
+import Imgix from "react-imgix";
+import styles from '../styles/uid/uid.module.scss'
 
 
 const Page = ({pageContainer}) => {
@@ -16,10 +14,16 @@ const Page = ({pageContainer}) => {
       <div className={styles.pageContainer}>
       <section className={styles.container}>
         <div className={styles.imageContainer}>
-          <PrismicNextImage
-          field={pageContainer.data.image}
-          height= "265"
-          />
+        <Imgix
+        src={`${pageContainer.data.image.url}`}
+        srcset=""
+        sizes='(min-width: 525px ) 500px, 100vw'
+        imgixParams={{ 
+            auto:'format',
+            q:100,
+            usm:10,
+            cs:'srgb'
+        }}/>
         </div>
         <div className={styles.textLinkContainer}>
           <RichText render={pageContainer.data.title} />

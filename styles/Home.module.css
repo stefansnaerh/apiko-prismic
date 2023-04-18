@@ -8,28 +8,8 @@
    
 }
 
-.dentistsContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4.5rem;
-}
 
-
-.dentistsContainer h1 {
-    font-size: 2rem;
-    font-weight: 400;
-    margin-bottom: 0px;
-   
-}
-
-.yellowLine {
-    background-color: #EBB45E;
-    height: 3px;
-    width: 130px;
-}
-
-@media (min-width: 768px){
+@media (min-width: 875px){
     .compInfoContainer>div:nth-child(even) section  {
         
         flex-direction: row-reverse;

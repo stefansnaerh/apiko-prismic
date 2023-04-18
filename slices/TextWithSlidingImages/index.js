@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import Image from 'next/image'
 import styles from './textWithSlidingImages.module.scss'
+import Imgix from 'react-imgix'
 
 import chevronRight from '../../public/chevronRight.svg'
 import chevronLeft from '../../public/chevronLeft.svg'
@@ -24,7 +25,7 @@ const TextWithSlidingImages = ({ slice }) => {
    }
    console.log(index)
   }
-
+console.log(slice)
   return (
   <section className={styles.container}>
     <div className={styles.textContainer}>
@@ -45,14 +46,15 @@ const TextWithSlidingImages = ({ slice }) => {
         />
       </div>
     {slice?.items?.map((item, i) => { 
+      console.log(item)
       return (
       <motion.div 
       key={i}
       animate={index === i ? {x:0}  : {x:400}}
       transition={{duration:0.5}}
       >
-        <PrismicNextImage
-          field={item.slideImage} 
+        <Imgix
+          src={item.slideimage.url} 
           width={350}
           height={250} 
         />

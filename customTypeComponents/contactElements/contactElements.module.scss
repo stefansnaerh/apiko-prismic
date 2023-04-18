@@ -44,16 +44,31 @@
     }
 }
 
+@media (max-width: 768px) {
+    .container {
+        div {
+            .yellowIcons {
+                display: none;
+            }
+        }
+    }
+}
+
 
 
 @media (min-width: 768px){
     .container {
         flex-direction: row;
-        height: 200px;
+        height: 300px;
         justify-content: center;
-        gap: 4rem;
+        gap: 6%;
+        .yellowIcons {
+            height: 36px;
+            margin-bottom: 5rem;
+       
+        }
         .yellowLine {
-            height: 160px;
+            height: 240px;
             width: 3px;
         }
         div {
@@ -67,3 +82,27 @@
         }
     }
 }
+
+@media screen and (min-width: 1328px) {
+    .container {
+        height: 400px;
+        .yellowLine {
+            height: 220px;
+            width: 4px;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            height: 240px;
+            p {
+                font-size: 2rem;
+            }
+            a {
+                justify-self: flex-end;
+                .button {
+                    font-size: 2rem;    
+                }
+            }
+        }
+    }
+  }

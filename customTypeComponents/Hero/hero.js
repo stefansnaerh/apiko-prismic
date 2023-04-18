@@ -22,7 +22,7 @@ const Hero = ({ heroContainer, isHamburgerOpen }) => {
           <div className={styles.sloganButtonsContainer}>
           <RichText render={heroContainer.data.company_slogan} />
           <div className={styles.buttonsContainer}>
-            <a  href={Link.url(heroContainer.data.about_company_link)}>
+            <a  href={`${heroContainer.data.about_company_link.uid}`}>
               <span >{heroContainer.data.about_link_text }</span>
             </a>
             <a  href={`/${heroContainer.data.book_appointment_link.uid}`}> 

@@ -136,6 +136,13 @@
           "placeholder": ""
         }
       },
+      "website_title": {
+        "type": "Text",
+        "config": {
+          "label": "Website title",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

@@ -7,14 +7,14 @@ import HamburgerButton from '../../components/hamburger/hamburger'
 import NavMobile from '../../components/navMobile/navMobile'
 import NavDesktop from '../../components/navDesktop/navDesktop'
 
-const Header = ( {navigationContainer, isHamburgerOpen, setIsHamburgerOpen} ) => {
+const Header = ( {navigationContainer, isHamburgerOpen, setIsHamburgerOpen, handleScrollContact} ) => {
     return (
         <header className={styles.header}>
             <a href={"/"}>
                 <PrismicNextImage 
                 field={navigationContainer.data.logo} 
                 alt={""}
-                height="70"
+                
                 /> 
            
             <div className={styles.logoTextContainer}>
@@ -31,6 +31,7 @@ const Header = ( {navigationContainer, isHamburgerOpen, setIsHamburgerOpen} ) =>
             isHamburgerOpen={isHamburgerOpen}
             />
             <NavDesktop
+            handleScrollContact={handleScrollContact}
             navigationContainer={navigationContainer}/>
         </header>
     )

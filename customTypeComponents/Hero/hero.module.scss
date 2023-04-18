@@ -87,3 +87,20 @@
         }
     }
   }
+
+  @media (min-width:1340px) {
+    .container {
+        .sloganButtonsContainer {
+            left: 20%;
+            h1 {
+                font-size: 3rem;
+                width: 24rem;
+            }
+            .buttonsContainer {
+                span {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+  }
