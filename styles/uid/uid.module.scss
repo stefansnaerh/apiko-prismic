@@ -74,7 +74,10 @@
         .textLinkContainer {
             width: clamp(22rem, 30%, 40rem);
             align-items: flex-start;
-          
+            gap: 2rem;
+            h2 {
+                font-size: 2.4rem;
+            }
             p {
                 font-size: 1.6rem;
             }

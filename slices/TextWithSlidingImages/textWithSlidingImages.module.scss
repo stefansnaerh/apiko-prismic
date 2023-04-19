@@ -64,3 +64,46 @@
             }
         }
 }
+
+
+
+@media (min-width : 875px) {
+    .container {
+        padding-top: 3rem;
+        gap: 5rem;
+        .textContainer {
+            flex-direction: row;
+            width: 80rem;
+            gap: 6rem;
+            h1 {
+                width: fit-content;
+                font-size: 2.4rem;
+                width: 340px;
+            }
+            p {
+                
+                width: fit-content;
+                max-width: 800px;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+@media (min-width:1340px) {
+    .container {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+        .textContainer {
+            width: 120rem;
+            gap: 10rem;
+            h1 {
+                font-size: 2.8rem;
+                width: 260px;
+            }
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+}
