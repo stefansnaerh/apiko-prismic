@@ -4,7 +4,7 @@ import styles from './hamburger.module.scss'
 
 
 const HamburgerButton = ({isHamburgerOpen, setIsHamburgerOpen}) => {
-   
+   // framer motion hamburger button with animations
     return (
         <div 
         className={styles.hamburger}

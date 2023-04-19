@@ -5,7 +5,7 @@
    flex-direction: column;
    align-items: center;
    gap: 3rem;
-   margin-top: 5rem;
+   margin-top: 6rem;
    margin-bottom: 5rem;
    div {
     display: flex;
@@ -62,17 +62,21 @@
         height: 300px;
         justify-content: center;
         gap: 6%;
+        margin-top: 8rem;
+        margin-bottom: 8rem;
         .yellowIcons {
             height: 36px;
             margin-bottom: 5rem;
-       
         }
         .yellowLine {
-            height: 240px;
+            height: 190px;
             width: 3px;
+            align-self: flex-end;
         }
         div {
             width: 200px;
+            height: 100%;
+            justify-content: space-around;
             p {
                 font-size: 1.6rem;
             }
@@ -85,7 +89,6 @@
 
 @media screen and (min-width: 1328px) {
     .container {
-        height: 400px;
         .yellowLine {
             height: 220px;
             width: 4px;
@@ -93,7 +96,7 @@
         div {
             display: flex;
             flex-direction: column;
-            height: 240px;
+          
             p {
                 font-size: 2rem;
             }
