@@ -7,7 +7,7 @@ import { components } from '../slices'
 import styles from './../styles/bookAppointment/bookAppointment.module.scss'
 
 const BookApointment = ( {bookAppointmentContainer} ) => {
-    console.log(bookAppointmentContainer)
+
     return (
         <section className={styles.container}>
             <RichText render={bookAppointmentContainer.data.title} />   

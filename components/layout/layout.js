@@ -10,9 +10,11 @@ import Head from "next/head"
 
 import styles from './layout.module.scss'
 
+// Layout component for elements that are on every page, e.g Header, Footer and Contact Elements
 const Layout = ({navigationContainer, contactElementsContainer, footerContainer, children}) => {
     const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
-    
+
+    // useRef to handle scroll to contactElements when the link them is clicked in header
     const contactRef = useRef(null)
     const handleScrollContact = () => {
       contactRef.current?.scrollIntoView({behavior:'smooth'})
@@ -50,8 +52,6 @@ const Layout = ({navigationContainer, contactElementsContainer, footerContainer,
 export default Layout
 
 
-
- 
 export async function getStaticProps({ previewData }) {
     const client = createClient({ previewData })
 
