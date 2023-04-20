@@ -10,7 +10,6 @@ import styles from '../styles/uid/uid.module.scss'
 
 
 const Page = ({pageContainer}) => {
-  console.log(pageContainer)
     return (
       <div className={styles.pageContainer}>
       <section className={styles.container}>
@@ -49,8 +48,7 @@ export async function getStaticProps({ params ,previewData }) {
     const client = createClient({ previewData })
 
     const pageContainer = await client.getByUID('company_info', params.uid)
-    console.log(pageContainer)
-  
+
     return {
       props: {
         pageContainer
@@ -62,7 +60,6 @@ export async function getStaticProps({ params ,previewData }) {
     const client = createClient();
   
     const pages = await client.getAllByType('company_info');
-    console.log(pages)
   
     return {
       paths: pages.map((page) => prismicH.asLink(page, linkResolver)),

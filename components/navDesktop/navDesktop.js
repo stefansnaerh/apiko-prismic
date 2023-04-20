@@ -8,6 +8,7 @@ import { useState } from 'react'
 
 const NavDesktop = ( {navigationContainer, handleScrollContact} ) => {
     const [underLineNav, setUnderLineNav] = useState('home')
+    
     return (
         <nav className={styles.nav}>
             <ul>
