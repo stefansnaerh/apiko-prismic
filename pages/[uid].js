@@ -13,7 +13,8 @@ const Page = ({pageContainer}) => {
     return (
       <div className={styles.pageContainer}>
       <section className={styles.container}>
-        <div className={styles.imageContainer}>
+        {pageContainer.data.image.url ?
+          <div className={styles.imageContainer}>
         <Imgix
         src={`${pageContainer.data.image.url}`}
         srcset=""
@@ -24,10 +25,10 @@ const Page = ({pageContainer}) => {
             usm:10,
             cs:'srgb'
         }}/>
-        </div>
+        </div> : null}
         <div className={styles.textLinkContainer}>
-          <RichText render={pageContainer.data.title} />
-          <RichText render={pageContainer.data.paragraph}/>
+         {pageContainer.data.title ?  <RichText render={pageContainer.data.title} /> : null}
+          {pageContainer.data.title ? <RichText render={pageContainer.data.paragraph}/>: null}
           {/* Ask about this way to link between pages 
           {pageContainer.data.read_more_link.uid ? <a  href={`/${pageContainer.data.read_more_link.slug}`}>
              { <span className={styles.button}>{pageContainer.data.read_more_link.uid.charAt(0).toUpperCase() + pageContainer.data.read_more_link.uid.slice(1)}</span>}
