@@ -3,12 +3,14 @@
 import styles from './navDesktop.module.scss'
 import Image from 'next/image'
 import calendarIcon from '../../public/calendar.svg'
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
+
 
 
 const NavDesktop = ( {navigationContainer, handleScrollContact} ) => {
-    const [underLineNav, setUnderLineNav] = useState('home')
-    
+
+    const [underLineNav, setUnderLineNav] = useState()
+
     return (
         <nav className={styles.nav}>
             <ul>
