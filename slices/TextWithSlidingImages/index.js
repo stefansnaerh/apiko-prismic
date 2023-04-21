@@ -12,6 +12,7 @@ import chevronLeft from '../../public/chevronLeft.svg'
 
 const TextWithSlidingImages = ({ slice }) => {
   // state to handle sliding images inside motion.div
+  console.log(slice)
   const [index, setIndex] = useState(0) 
   // counting nr of images and adding 1 so it goes to 0 if the counter goes over nr of images
   const imgCount = slice.items.length
@@ -43,8 +44,7 @@ const TextWithSlidingImages = ({ slice }) => {
       {slice.primary.paragraph? <RichText render={slice.primary.paragraph}/> : null}
     </div>
     
-    { slice.items ?
-      <>
+
      <div className={styles.imagesContainerMobile} >
       <div className={styles.chevronRight} onClick={slideRight} >
         <Image
@@ -97,7 +97,6 @@ const TextWithSlidingImages = ({ slice }) => {
         </>
      )})}
           </div>
-          </> : null}
   </section>
   )
 }
