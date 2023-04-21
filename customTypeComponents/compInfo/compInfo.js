@@ -13,7 +13,7 @@ const CompanyInfo = (compInfo) => {
         <RichText render={compInfo.compInfo.data.title} />
         <span className={styles.yellowLine}></span>
         <RichText render={compInfo.compInfo.data.paragraph}/>
-        <a  href={`/${compInfo.compInfo.data.uid}`}>
+        <a  href={`/${compInfo.compInfo.uid}`}>
             <span className={styles.button}>{compInfo.compInfo.data.read_more_text}</span>
         </a>
         </div>
