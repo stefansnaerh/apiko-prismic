@@ -12,7 +12,7 @@ const NavMobile = ({ navigationContainer, isHamburgerOpen }) => {
     return (
         <motion.nav 
             className={styles.navbar}
-            animate={isHamburgerOpen ? {x:-800}: {x : 0}}
+            animate={isHamburgerOpen ? {x:-950}: {x : 0}}
             transition={{duration:0.5}}
             >
                 <ul>
