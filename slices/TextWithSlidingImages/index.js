@@ -39,10 +39,10 @@ const TextWithSlidingImages = ({ slice }) => {
   return (
   <section className={styles.container}>
     <div className={styles.textContainer}>
-      <RichText render={slice.primary.title}/>
-      <RichText render={slice.primary.paragraph}/>
+     {slice.primary.title ? <RichText render={slice.primary.title}/>: null}
+      {slice.primary.paragraph? <RichText render={slice.primary.paragraph}/> : null}
     </div>
-    <div className={styles.imagesContainer} >
+    <div className={styles.imagesContainerMobile} >
       <div className={styles.chevronRight} onClick={slideRight} >
         <Image
         src={chevronRight}
@@ -67,7 +67,7 @@ const TextWithSlidingImages = ({ slice }) => {
           <Imgix
             src={item.slideimage.url} 
             width={350}
-            height={250} 
+            height={250}
             imgixParams={{
               auto: 'format',
               q:100,
@@ -76,6 +76,23 @@ const TextWithSlidingImages = ({ slice }) => {
             }}
           />
         </motion.div>
+     )})}
+    </div>
+    <div className={styles.imagesContainerDesktop}>
+    {slice?.items?.map((item, i) => { 
+      return (
+        <>
+          <Imgix
+            src={item.slideimage.url} 
+            sizes='(min-width: 1600px ) 425px, 350px'
+            imgixParams={{
+              auto: 'format',
+              q:100,
+              usm:10,
+              cs:'srgb'
+            }}
+          />
+        </>
      )})}
     </div>
   </section>

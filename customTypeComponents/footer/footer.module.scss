@@ -17,3 +17,21 @@
     }
 }
 
+
+
+@media (min-width : 900px) {
+    .container {
+        flex-direction: row;
+        height: 8rem;
+        justify-content: center;
+        gap: 7rem;
+        p {
+            font-size: 1.4rem;
+        }
+    }
+}
+@media (min-width : 1300px) {
+   .container {
+    gap: 20rem;
+   }
+}
