@@ -10,13 +10,17 @@ const CompanyInfo = (compInfo) => {
     return (
         <section className={styles.container}>
         <div className={styles.textLinkContainer}>
-        <RichText render={compInfo.compInfo.data.title} />
+            {compInfo.compInfo.data.title ?
+            <RichText render={compInfo.compInfo.data.title} /> : null}
         <span className={styles.yellowLine}></span>
-        <RichText render={compInfo.compInfo.data.paragraph}/>
-        <a  href={`/${compInfo.compInfo.uid}`}>
+            {compInfo.compInfo.data.paragraph ? 
+            <RichText render={compInfo.compInfo.data.paragraph}/> : null}
+        {compInfo.compInfo.data.read_more_text ? 
+            <a  href={`/${compInfo.compInfo.uid}`}>
             <span className={styles.button}>{compInfo.compInfo.data.read_more_text}</span>
-        </a>
+        </a> : null}
         </div>
+        {compInfo.compInfo.data.image.url ?
         <Imgix
         src={`${compInfo.compInfo.data.image.url}`}
         alt={compInfo.compInfo.data.image.alt}
@@ -28,7 +32,7 @@ const CompanyInfo = (compInfo) => {
             usm:10,
             cs:'srgb'
         }}
-        />
+        /> : null}
         </section>
     )
 }
