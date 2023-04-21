@@ -1,5 +1,6 @@
 import React from 'react'
 import { RichText } from 'prismic-reactjs'
+
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import Image from 'next/image'
@@ -41,7 +42,10 @@ const TextWithSlidingImages = ({ slice }) => {
      {slice.primary.title ? <RichText render={slice.primary.title}/>: null}
       {slice.primary.paragraph? <RichText render={slice.primary.paragraph}/> : null}
     </div>
-    <div className={styles.imagesContainerMobile} >
+    
+    { slice.items ?
+      <>
+     <div className={styles.imagesContainerMobile} >
       <div className={styles.chevronRight} onClick={slideRight} >
         <Image
         src={chevronRight}
@@ -54,7 +58,6 @@ const TextWithSlidingImages = ({ slice }) => {
         alt='chevron right'
         />
       </div>
-    
     {slice?.items?.map((item, i) => { 
       return (
         <motion.div 
@@ -93,7 +96,8 @@ const TextWithSlidingImages = ({ slice }) => {
           />
         </>
      )})}
-    </div>
+          </div>
+          </> : null}
   </section>
   )
 }
