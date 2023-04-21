@@ -35,7 +35,7 @@ const TextWithSlidingImages = ({ slice }) => {
         setIndex(index - 1)
       }
   }
-  console.log(slice.items[0].slideimage.url)
+ 
   return (
   <section className={styles.container}>
     <div className={styles.textContainer}>
