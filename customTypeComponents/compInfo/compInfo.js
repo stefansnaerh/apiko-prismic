@@ -7,15 +7,13 @@ import Imgix from 'react-imgix'
 
 
 const CompanyInfo = (compInfo) => {
-    console.log(compInfo)
-    console.log(compInfo.compInfo.data.uid)
     return (
         <section className={styles.container}>
         <div className={styles.textLinkContainer}>
         <RichText render={compInfo.compInfo.data.title} />
         <span className={styles.yellowLine}></span>
         <RichText render={compInfo.compInfo.data.paragraph}/>
-        <a  href={`/${compInfo.compInfo.uid}`}>
+        <a  href={`/${compInfo.compInfo.data.uid}`}>
             <span className={styles.button}>{compInfo.compInfo.data.read_more_text}</span>
         </a>
         </div>
