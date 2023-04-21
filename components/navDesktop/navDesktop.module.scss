@@ -13,12 +13,6 @@
     a {
         display: flex;
         flex-direction: column;
-        div {
-            height: 5px;
-            width: 100%;
-            background-color: #FCF2EA;
-            border-radius: 5px;
-        }
         li {
             cursor: pointer;
         }
