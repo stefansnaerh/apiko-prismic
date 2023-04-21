@@ -1,6 +1,5 @@
 import React from 'react'
 import { RichText } from 'prismic-reactjs'
-import { PrismicNextImage } from '@prismicio/next'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import Image from 'next/image'
@@ -84,7 +83,7 @@ const TextWithSlidingImages = ({ slice }) => {
         <>
           <Imgix
             src={item.slideimage.url} 
-            sizes='(min-width: 1600px ) 425px, 350px'
+            sizes='(min-width: 1600px ) 400px, 350px'
             imgixParams={{
               auto: 'format',
               q:100,
