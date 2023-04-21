@@ -23,6 +23,7 @@ const ContactElements = ( {contactElementsContainer} ) => {
                 alt="phone icon"
                 className={styles.yellowIcons}
                 height={32}
+                width={32}
                 />
                 <RichText render={contactElementsContainer.data.phone_paragraph} />           
                 <a  href={`tel:${contactElementsContainer.data.phone_number}`}>
@@ -39,6 +40,7 @@ const ContactElements = ( {contactElementsContainer} ) => {
                 alt="mail icon"
                 className={styles.yellowIcons}
                 height={32}
+                width={32}
                 />
                 <RichText render={contactElementsContainer.data.mail_paragraph} />           
                 <a  href={`mailto:${contactElementsContainer.data.mail_address}`}>
@@ -55,6 +57,7 @@ const ContactElements = ( {contactElementsContainer} ) => {
                 alt="phone icon"
                 className={styles.yellowIcons}
                 height={36}
+                width={36}
                 />
                 
                 <RichText render={contactElementsContainer.data.location_paragraph} />           

@@ -6,7 +6,6 @@ import { useState } from 'react'
 import Image from 'next/image'
 import styles from './textWithSlidingImages.module.scss'
 import Imgix from 'react-imgix'
-
 import chevronRight from '../../public/chevronRight.svg'
 import chevronLeft from '../../public/chevronLeft.svg'
 
