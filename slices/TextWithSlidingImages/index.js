@@ -58,7 +58,9 @@ const TextWithSlidingImages = ({ slice }) => {
         />
       </div>
     {slice?.items?.map((item, i) => { 
-      return (
+      console.log(item)
+      item.slideimage && item.slideimage.url ? (
+       (
         <motion.div 
         key={i}
         animate={index === i ? {opacity : 1}  : {opacity: 0}}
@@ -77,7 +79,7 @@ const TextWithSlidingImages = ({ slice }) => {
             }}
           />
         </motion.div>
-     )})}
+     )): null})}
     </div>
     <div className={styles.imagesContainerDesktop}>
     {slice?.items?.map((item, i) => { 

@@ -38,14 +38,6 @@
           "thumbnails": []
         }
       },
-      "read_more_link": {
-        "type": "Link",
-        "config": {
-          "label": "read more link",
-          "placeholder": "",
-          "select": null
-        }
-      },
       "read_more_text": {
         "type": "Text",
         "config": {

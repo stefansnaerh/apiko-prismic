@@ -1,7 +1,7 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "drew"
+    "value": "rain"
   },
   "title": {
     "__TYPE__": "StructuredTextContent",
@@ -9,7 +9,7 @@
       {
         "type": "heading2",
         "content": {
-          "text": "Angry"
+          "text": "Donkey"
         }
       }
     ]
@@ -20,7 +20,7 @@
       {
         "type": "paragraph",
         "content": {
-          "text": "Laboris in occaecat ea aliqua qui in exercitation laboris fugiat ad deserunt amet excepteur eiusmod culpa."
+          "text": "Ad fugiat Lorem consequat est."
         }
       }
     ]
@@ -29,13 +29,13 @@
     "__TYPE__": "ImageContent",
     "origin": {
       "id": "main",
-      "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
-      "width": 6000,
-      "height": 4000
+      "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+      "width": 4160,
+      "height": 3120
     },
-    "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
-    "width": 6000,
-    "height": 4000,
+    "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+    "width": 4160,
+    "height": 3120,
     "edit": {
       "zoom": 1,
       "crop": {
@@ -46,23 +46,16 @@
     },
     "thumbnails": {}
   },
-  "read_more_link": {
-    "__TYPE__": "LinkContent",
-    "value": {
-      "__TYPE__": "ExternalLink",
-      "url": "https://slicemachine.dev"
-    }
-  },
   "read_more_text": {
     "__TYPE__": "FieldContent",
-    "value": "yesterday",
+    "value": "is",
     "type": "Text"
   },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "text_with_sliding_images$16b8f188-8912-46c3-ab99-5d832b2de98c",
+        "key": "text_with_sliding_images$8dd381a3-9c34-40c8-9dac-830d25bd24da",
         "name": "text_with_sliding_images",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -74,7 +67,7 @@
                 {
                   "type": "heading1",
                   "content": {
-                    "text": "Thumb"
+                    "text": "Fastened"
                   }
                 }
               ]
@@ -85,7 +78,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Ullamco esse proident consectetur reprehenderit in officia sint anim labore do."
+                    "text": "Commodo qui sunt ea voluptate nulla pariatur nostrud amet irure dolor incididunt dolor magna velit."
                   }
                 }
               ]
@@ -101,13 +94,13 @@
                     "__TYPE__": "ImageContent",
                     "origin": {
                       "id": "main",
-                      "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-                      "width": 3882,
-                      "height": 2584
+                      "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636",
+                      "width": 3935,
+                      "height": 5894
                     },
-                    "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-                    "width": 3882,
-                    "height": 2584,
+                    "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636",
+                    "width": 3935,
+                    "height": 5894,
                     "edit": {
                       "zoom": 1,
                       "crop": {
@@ -120,60 +113,6 @@
                   }
                 ]
               ]
-            }
-          ]
-        }
-      },
-      {
-        "key": "text_block$ae18772b-7c38-4156-9177-02e741e64a04",
-        "name": "text_block",
-        "widget": {
-          "__TYPE__": "SharedSliceContent",
-          "variation": "default",
-          "primary": {
-            "headline": {
-              "__TYPE__": "StructuredTextContent",
-              "value": [
-                {
-                  "type": "heading1",
-                  "content": {
-                    "text": "Married"
-                  }
-                }
-              ]
-            },
-            "paragraph": {
-              "__TYPE__": "StructuredTextContent",
-              "value": [
-                {
-                  "type": "paragraph",
-                  "content": {
-                    "text": "Minim do ipsum consectetur. Quis nisi ipsum laborum sit."
-                  }
-                }
-              ]
-            },
-            "link_text": {
-              "__TYPE__": "FieldContent",
-              "value": "matter",
-              "type": "Text"
-            },
-            "link": {
-              "__TYPE__": "LinkContent",
-              "value": {
-                "id": "mock_Media_link",
-                "kind": "image/jpeg",
-                "name": "mock_name",
-                "url": "https://source.unsplash.com/daily",
-                "size": "0",
-                "__TYPE__": "FileLink"
-              }
-            }
-          },
-          "items": [
-            {
-              "__TYPE__": "GroupItemContent",
-              "value": []
             }
           ]
         }

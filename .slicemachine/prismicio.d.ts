@@ -82,17 +82,6 @@ interface CompanyInfoDocumentData {
      */
     image: prismicT.ImageField<never>;
     /**
-     * read more link field in *Company Info*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: company_info.read_more_link
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    read_more_link: prismicT.LinkField;
-    /**
      * read more text field in *Company Info*
      *
      * - **Field Type**: Text
