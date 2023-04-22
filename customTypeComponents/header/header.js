@@ -13,10 +13,7 @@ const Header = ( {navigationContainer, isHamburgerOpen, setIsHamburgerOpen, hand
             <a href={"/"}>
                 <PrismicNextImage 
                 field={navigationContainer.data.logo} 
-                alt={""}
-                
                 /> 
-           
             <div className={styles.logoTextContainer}>
                 <RichText render={navigationContainer.data.logo_text} />
                 <RichText render={navigationContainer.data.logo_subtext} />

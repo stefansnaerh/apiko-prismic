@@ -42,7 +42,7 @@ const TextWithSlidingImages = ({ slice }) => {
      {slice.primary.title ? <RichText render={slice.primary.title}/>: null}
       {slice.primary.paragraph? <RichText render={slice.primary.paragraph}/> : null}
     </div>
-    { slice.items[0].slideimage.url ? 
+    { slice.items && slice.items[0] && slice.items[0].slideimage.url ? 
     <>
      <div className={styles.imagesContainerMobile} >
       <div className={styles.chevronRight} onClick={slideRight} >
