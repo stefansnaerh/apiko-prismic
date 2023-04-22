@@ -35,7 +35,7 @@ const TextWithSlidingImages = ({ slice }) => {
         setIndex(index - 1)
       }
   }
- 
+
   return (
   <section className={styles.container}>
     <div className={styles.textContainer}>
@@ -58,7 +58,6 @@ const TextWithSlidingImages = ({ slice }) => {
         />
       </div>
     {slice?.items?.map((item, i) => { 
-      console.log(item)
       item.slideimage && item.slideimage.url ? (
        (
         <motion.div 
