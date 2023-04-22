@@ -37,5 +37,4 @@ const CompanyInfo = (compInfo) => {
     )
 }
 
-
 export default CompanyInfo

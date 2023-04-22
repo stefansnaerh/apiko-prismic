@@ -58,7 +58,7 @@ const TextWithSlidingImages = ({ slice }) => {
         />
       </div>
     {slice?.items?.map((item, i) => { 
-      item.slideimage && item.slideimage.url ? (
+      return (
        (
         <motion.div 
         key={i}
@@ -78,7 +78,7 @@ const TextWithSlidingImages = ({ slice }) => {
             }}
           />
         </motion.div>
-     )): null})}
+     ))})}
     </div>
     <div className={styles.imagesContainerDesktop}>
     {slice?.items?.map((item, i) => { 
