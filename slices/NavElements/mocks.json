@@ -1,0 +1,38 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {},
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "linktext",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Non eu veniam duis ad aliqua aliquip sit excepteur reprehenderit velit. Magna commodo laborum aliqua exercitation deserunt dolore qui nisi eiusmod anim officia amet excepteur elit."
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "link",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://google.com"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

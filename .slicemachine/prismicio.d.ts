@@ -749,16 +749,6 @@ export type DentistSlice = prismicT.SharedSlice<"dentist", DentistSliceVariation
  */
 interface InputsSliceDefaultPrimary {
     /**
-     * input button link field in *Inputs → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: inputs.primary.input_button_link
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    input_button_link: prismicT.LinkField;
-    /**
      * input button text field in *Inputs → Primary*
      *
      * - **Field Type**: Text
@@ -838,6 +828,55 @@ type InputsSliceVariation = InputsSliceDefault;
  *
  */
 export type InputsSlice = prismicT.SharedSlice<"inputs", InputsSliceVariation>;
+/**
+ * Item in NavElements → Items
+ *
+ */
+export interface NavElementsSliceDefaultItem {
+    /**
+     * link field in *NavElements → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_elements.items[].link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+    /**
+     * linktext field in *NavElements → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_elements.items[].linktext
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    linktext: prismicT.RichTextField;
+}
+/**
+ * Default variation for NavElements Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `NavElements`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavElementsSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<NavElementsSliceDefaultItem>>;
+/**
+ * Slice variation for *NavElements*
+ *
+ */
+type NavElementsSliceVariation = NavElementsSliceDefault;
+/**
+ * NavElements Shared Slice
+ *
+ * - **API ID**: `nav_elements`
+ * - **Description**: `NavElements`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavElementsSlice = prismicT.SharedSlice<"nav_elements", NavElementsSliceVariation>;
 /**
  * Primary content in TextWithList → Primary
  *
@@ -1012,6 +1051,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { BookAppointmentDocumentData, BookAppointmentDocumentDataSlicesSlice, BookAppointmentDocument, CompanyInfoDocumentData, CompanyInfoDocumentDataSlicesSlice, CompanyInfoDocument, ContactElementsDocumentData, ContactElementsDocument, DentistsDocumentData, DentistsDocumentDataSlicesSlice, DentistsDocument, FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, DentistSliceDefaultPrimary, DentistSliceDefault, DentistSliceVariation, DentistSlice, InputsSliceDefaultPrimary, InputsSliceDefaultItem, InputsSliceDefault, InputsSliceVariation, InputsSlice, TextSliceDefaultPrimary, TextSliceDefaultItem, TextSliceDefault, TextSliceVariation, TextSlice, TextWithSlidingImagesSliceDefaultPrimary, TextWithSlidingImagesSliceDefaultItem, TextWithSlidingImagesSliceDefault, TextWithSlidingImagesSliceVariation, TextWithSlidingImagesSlice, TextWithTitleSliceDefaultPrimary, TextWithTitleSliceDefault, TextWithTitleSliceVariation, TextWithTitleSlice };
+        export type { BookAppointmentDocumentData, BookAppointmentDocumentDataSlicesSlice, BookAppointmentDocument, CompanyInfoDocumentData, CompanyInfoDocumentDataSlicesSlice, CompanyInfoDocument, ContactElementsDocumentData, ContactElementsDocument, DentistsDocumentData, DentistsDocumentDataSlicesSlice, DentistsDocument, FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, DentistSliceDefaultPrimary, DentistSliceDefault, DentistSliceVariation, DentistSlice, InputsSliceDefaultPrimary, InputsSliceDefaultItem, InputsSliceDefault, InputsSliceVariation, InputsSlice, NavElementsSliceDefaultItem, NavElementsSliceDefault, NavElementsSliceVariation, NavElementsSlice, TextSliceDefaultPrimary, TextSliceDefaultItem, TextSliceDefault, TextSliceVariation, TextSlice, TextWithSlidingImagesSliceDefaultPrimary, TextWithSlidingImagesSliceDefaultItem, TextWithSlidingImagesSliceDefault, TextWithSlidingImagesSliceVariation, TextWithSlidingImagesSlice, TextWithTitleSliceDefaultPrimary, TextWithTitleSliceDefault, TextWithTitleSliceVariation, TextWithTitleSlice };
     }
 }

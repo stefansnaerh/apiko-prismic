@@ -3,21 +3,14 @@
     "__TYPE__": "SharedSliceContent",
     "variation": "default",
     "primary": {
-      "input_button_link": {
-        "__TYPE__": "LinkContent",
-        "value": {
-          "__TYPE__": "ExternalLink",
-          "url": "https://slicemachine.dev"
-        }
-      },
       "input_button_text": {
         "__TYPE__": "FieldContent",
-        "value": "motion",
+        "value": "similar",
         "type": "Text"
       },
       "input_big": {
         "__TYPE__": "FieldContent",
-        "value": "rhyme",
+        "value": "pick",
         "type": "Text"
       },
       "input_big_headline": {
@@ -26,14 +19,14 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Magna commodo duis quis sit ipsum elit Lorem non nostrud do. Minim tempor consequat occaecat deserunt reprehenderit adipisicing velit adipisicing velit dolore eu et."
+              "text": "Consectetur consectetur adipisicing cillum aliquip culpa cupidatat est eiusmod dolor sint. Dolore sint sint officia id velit officia eiusmod cillum exercitation. Laboris sit enim et elit consectetur id."
             }
           }
         ]
       },
       "input_big_placeholder": {
         "__TYPE__": "FieldContent",
-        "value": "foreign",
+        "value": "corner",
         "type": "Text"
       }
     },
@@ -45,7 +38,7 @@
             "input_small",
             {
               "__TYPE__": "FieldContent",
-              "value": "roll",
+              "value": "minerals",
               "type": "Text"
             }
           ]

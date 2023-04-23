@@ -45,6 +45,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "NavElements": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

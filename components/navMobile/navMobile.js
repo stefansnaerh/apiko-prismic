@@ -29,9 +29,7 @@ const NavMobile = ({ navigationContainer, isHamburgerOpen }) => {
                     <a href={'/dentists'}>
                         <li>{navigationContainer.data.specialists_link_text }</li>
                     </a>
-                    <a href={Link.url(navigationContainer.data.contact_link)}>
-                        <li>{navigationContainer.data.contact_link_text }</li>
-                    </a>
+              
                 </ul>
                 <div className={styles.buttonContainer}>
                     <a href={`Tel: ${navigationContainer.data.phone_text}`}>
